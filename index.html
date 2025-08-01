@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>websiteEdu </title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+    body { font-family: Arial, sans-serif; background-color: #f8f9fa; }
+    .navbar, footer { background-color: #022650; }
+    .navbar .nav-link, .navbar-brand, footer { color: #fff !important; }
+    .carousel-item img { height: 45vh; object-fit: cover; }
+    .highlight-box { background-color: #022650; color: white; text-align: center; }
+    .highlight-box .col-md-3 { border-right: 1px solid #fff; padding: 20px 0; }
+    .highlight-box .col-md-3:last-child { border-right: none; }
+    .about-section, .video-section, .wall-of-fame, .roadmap, .testimonial-section, footer { padding: 60px 20px; }
+    .about-img { max-width: 100%; border: 10px solid #eee; border-radius: 15px; }
+    .floating-whatsapp { position: fixed; bottom: 20px; right: 20px; background-color: #25d366; color: white; border-radius: 50%; padding: 15px; font-size: 24px; z-index: 1000; }
+    .course-card { position: relative; overflow: hidden; border: 1px solid #ddd; border-radius: 10px; padding: 20px; background: white; margin: 10px; transition: transform 0.3s ease; }
+    .course-card:hover { transform: translateY(-5px); }
+    .course-counter { position: absolute; top: 10px; right: 10px; background: red; color: white; padding: 5px 10px; border-radius: 50%; }
+    .testimonial { background: white; padding: 20px; margin: 10px; border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+    .roadmap ul li { margin: 10px 0; font-weight: bold; }
+    @media (max-width: 768px) {
+      .about-section { flex-direction: column; text-align: center; }
+      .about-section img, .about-section div { margin-bottom: 20px; }
+    }
+/* Stats Section */
+.stat-highlight {
+  background-color: #88c043; /* green box */
+  color: white;
+  padding: 30px 0;
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold;
+  text-align: center;
+}
+
+.stat-highlight .col-md-3 {
+  border-right: 1px solid #ffffff55;
+}
+
+.stat-highlight .col-md-3:last-child {
+  border-right: none;
+}
+
+/* Counselling Banner */
+.counselling-banner {
+  position: relative;
+  background: url('counselling-bg.jpg') center/cover no-repeat;
+  color: white;
+  text-align: center;
+}
+
+.counselling-banner .overlay {
+  background: rgba(0, 0, 0, 0.6);
+  padding: 60px 20px;
+}
+
+.counselling-banner .highlight-text {
+  background-color: #ffea00;
+  color: #000;
+  display: inline-block;
+  font-weight: 600;
+  padding: 8px 20px;
+  border-radius: 4px;
+  margin: 15px 0;
+}
+
+/* CTA Button */
+.counselling-banner .btn-warning {
+  font-weight: bold;
+  padding: 10px 25px;
+  font-size: 16px;
+}
+.dropdown:hover .dropdown-menu {
+    display: block;
+    margin-top: 0;
+  }
+</style>
+
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark ">
+  <div class="container">
+    <a class="navbar-brand" href="#">
+      <img src="logo.png" alt="website Logo" height="40">
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav me-auto">
+        <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Result</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Connect Us</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Demo Lectures</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Other</a></li>
+      </ul>
+      <div class="dropdown me-2">
+  <button class="btn btn-warning dropdown-toggle" type="button" id="buyCourseDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+    Buy Course
+  </button>
+  <ul class="dropdown-menu" aria-labelledby="buyCourseDropdown">
+    <li><a class="dropdown-item" href="#">MBA Entrance</a></li>
+    <li><a class="dropdown-item" href="#">LAW Entrance</a></li>
+    <li><a class="dropdown-item" href="#">MCA Entrance</a></li>
+    <li><a class="dropdown-item" href="#">TISS Entrance</a></li>
+    <li><a class="dropdown-item" href="#">BBA Entrance</a></li>
+    <li><a class="dropdown-item" href="#">Hotel Management</a></li>
+  </ul>
+</div>
+
+    <!-- Login Button -->
+<button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#loginModal">
+  Login / Register
+</button>
+
+<!-- Login Modal -->
+<div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content d-flex flex-md-row">
+      <!-- Login Form -->
+      <div class="modal-body p-4 w-100">
+        <h5 class="mb-3">Welcome to <span class="text-success fw-bold">Institute</span></h5>
+        <button type="button" class="btn-close position-absolute top-0 end-0 m-3" data-bs-dismiss="modal" aria-label="Close"></button>
+        <form id="loginForm" novalidate>
+          <div class="mb-3">
+            <label for="email" class="form-label">Email address</label>
+            <input type="email" class="form-control" id="email" required>
+            <div class="invalid-feedback">Please enter a valid email.</div>
+          </div>
+          <div class="mb-3">
+            <label for="password" class="form-label">Password</label>
+            <input type="password" class="form-control" id="password" required>
+            <div class="invalid-feedback">Please enter your password.</div>
+          </div>
+          <div class="form-check mb-3">
+            <input class="form-check-input" type="checkbox" id="remember">
+            <label class="form-check-label" for="remember">Remember me</label>
+          </div>
+          <button type="submit" class="btn btn-success w-100">Login</button>
+          <p class="text-center mt-3">
+            Don't have an account? 
+            <a href="#" data-bs-toggle="modal" data-bs-target="#registerModal" data-bs-dismiss="modal">Register Now..!</a>
+          </p>
+        </form>
+      </div>
+      
+    </div>
+  </div>
+</div>
+<!-- Register Modal -->
+<div class="modal fade" id="registerModal" tabindex="-1" aria-labelledby="registerModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content p-4">
+      <h5 class="mb-3">Register with <span class="text-success fw-bold">Institute</span></h5>
+      <button type="button" class="btn-close position-absolute top-0 end-0 m-3" data-bs-dismiss="modal" aria-label="Close"></button>
+      <form id="registerForm" novalidate>
+        <div class="mb-3">
+          <label for="regName" class="form-label">Full Name</label>
+          <input type="text" class="form-control" id="regName" required>
+          <div class="invalid-feedback">Enter your name.</div>
+        </div>
+        <div class="mb-3">
+          <label for="regEmail" class="form-label">Email</label>
+          <input type="email" class="form-control" id="regEmail" required>
+          <div class="invalid-feedback">Enter a valid email.</div>
+        </div>
+        <div class="mb-3">
+          <label for="regPassword" class="form-label">Password</label>
+          <input type="password" class="form-control" id="regPassword" required>
+          <div class="invalid-feedback">Enter a password.</div>
+        </div>
+        <button type="submit" class="btn btn-success w-100">Register</button>
+      </form>
+    </div>
+  </div>
+</div>
+
+
+    </div>
+  </div>
+</nav>
+
+<!-- Carousel Banner -->
+<div id="mainCarousel" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="programming-background-with-person-working-with-codes-computer_23-2150010127.jpg" class="d-block w-100" alt="Banner 1">
+    </div>
+    <div class="carousel-item">
+      <img src="html-css-collage-concept-with-person_23-2150062008.jpg" class="d-block w-100" alt="Banner 2">
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#mainCarousel" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#mainCarousel" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+
+<!-- Courses Section -->
+  <section id="courses" class="py-5 bg-light">
+    <div class="container">
+      <h2>Our Courses</h2>
+      <input type="text" id="courseFilter" class="form-control mb-3" placeholder="Search courses...">
+      <div class="row" id="courseList">
+        <div class="col-md-4">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">MBA Entrance</h5>
+              <p class="card-text">Courses for CAT, XAT, CET, CMAT and other top MBA entrance exams.</p>
+              <button class="btn btn-primary joinNowBtn">Join Now</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Law Entrance</h5>
+              <p class="card-text">Preparation for CLAT, MH CET Law, AILET and more.</p>
+              <button class="btn btn-primary joinNowBtn">Join Now</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Govt Exams</h5>
+              <p class="card-text">Coaching for Banking, SSC, Railways, and other government exams.</p>
+              <button class="btn btn-primary joinNowBtn">Join Now</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">MCA Entrance</h5>
+              <p class="card-text">Preparation for MCACET, NIMCET, CUET PG MCA, MAH BCACET and more.</p>
+              <button class="btn btn-primary joinNowBtn">Join Now</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">TISS Entrance</h5>
+              <p class="card-text">Preparation for CUET PG COQP12, CUET PG COQP11, TISS CAT and more.</p>
+              <button class="btn btn-primary joinNowBtn">Join Now</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">BBA Entrance</h5>
+              <p class="card-text">Preparation for IPMAT, NPAT, SET GENERAL, JIPMAT, CUET UG, IIM and more.</p>
+              <button class="btn btn-primary joinNowBtn">Join Now</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<!-- Stat Highlight Section -->
+<section class="text-white py-4 text-center" style="background-color: #022650; color: white; text-align: center; ">
+  <div class="container">
+    <div class="row">
+      <div class="col-6 col-md-3">
+        <h4><strong>5</strong></h4>
+        <p>Centres</p>
+      </div>
+      <div class="col-6 col-md-3">
+        <h4><strong>4000</strong></h4>
+        <p>Student Selection</p>
+      </div>
+      <div class="col-6 col-md-3">
+        <h4><strong>120000</strong></h4>
+        <p>Youtube Subscribe</p>
+      </div>
+      <div class="col-6 col-md-3">
+        <h4><strong>10000</strong></h4>
+        <p>Practice questions</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Highlight Banner -->
+<section class="position-relative text-center text-white" style="background: url(img3.jpg) center/cover no-repeat;">
+  <div class="overlay py-5" style="background: rgba(0,0,0,0.6);">
+    <div class="container">
+      <h2 class="mb-3">100+ Counselling on Daily Basis</h2>
+      <p class="bg-warning text-dark d-inline-block px-3 py-1 fw-bold">Our dedicated team is always ready to help you with exam preparation and all your course-related queries</p>
+      <div class="mt-3">
+        <a href="#" class="btn btn-warning text-dark fw-bold">FREE COUNSELLING</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- Wall of Fame -->
+<div class="wall-of-fame container text-center">
+  <h2>Wall of Fame</h2>
+  <div class="swiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide"><img src="Rudra.jpeg" class="img-fluid rounded"></div>
+      <div class="swiper-slide"><img src="Shrushti.jpeg" class="img-fluid rounded"></div>
+      <div class="swiper-slide"><img src="Sudhir.jpeg" class="img-fluid rounded"></div>
+      <div class="swiper-slide"><img src="Rudra.jpeg" class="img-fluid rounded"></div>
+      <div class="swiper-slide"><img src="Shrushti.jpeg" class="img-fluid rounded"></div>
+      <div class="swiper-slide"><img src="Sudhir.jpeg" class="img-fluid rounded"></div>
+      <div class="swiper-slide"><img src="Rudra.jpeg" class="img-fluid rounded"></div>
+      <div class="swiper-slide"><img src="Shrushti.jpeg" class="img-fluid rounded"></div>
+      <div class="swiper-slide"><img src="Sudhir.jpeg" class="img-fluid rounded"></div>
+    </div>
+  </div>
+</div>
+
+<!-- About Us Section -->
+<section class="bg-white py-5">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-md-6 mb-4 mb-md-0">
+        <img src="beautiful-indian-traditional-girl-posing-white-wall_136354-5491.jpg" alt="About website" climg-fluid rounded shadow">
+      </div>
+      <div class="col-md-6">
+        <h2>About Us</h2>
+        <p>Success is not just about knowing the right answers, but about developing the right mindset. Here at website Edun, we believe in a holistic approach to exam preparation, combining hard work, smart strategies, and personal growth.
+
+Each student has a unique learning style, and our goal is to help you discover your strengths and overcome challenges in a way that suits you best. With the right guidance, discipline, and consistent effort, nothing is impossible.</p>
+        <p>Our training programs are designed not just to help you ace your exams, but to build your confidence and resilience in the process.
+
+Remember, the journey may be tough, but every step you take is an opportunity to grow. We are here to support you, answer your questions, and guide you towards the path of success. Together, we'll make your dream of cracking the entrance exams a reality.</p>
+        <a href="#" class="btn btn-primary mt-3">Learn More</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Video Section -->
+<div class="video-section container">
+  <h2 class="text-center mb-4">Demo Videos</h2>
+  <div class="row">
+    <div class="col-md-4 mb-3"><iframe width="100%" height="200" src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allowfullscreen></iframe></div>
+    <div class="col-md-4 mb-3"><iframe width="100%" height="200" src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allowfullscreen></iframe></div>
+    <div class="col-md-4 mb-3"><iframe width="100%" height="200" src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allowfullscreen></iframe></div>
+  </div>
+</div>
+
+<!-- Roadmap
+<div id="roadmap" class="roadmap bg-light">
+  <h2>Preparation Roadmap</h2>
+  <p>From counselling to cracking the exam — your journey starts here!</p>
+  <ul class="list-unstyled">
+    <li>1. Counselling & Planning</li>
+    <li>2. Foundation Courses</li>
+    <li>3. Practice & Revision</li>
+    <li>4. Mock Tests & Analysis</li>
+    <li>5. Final Touch & Strategy</li>
+  </ul>
+</div> -->
+
+<!-- Testimonials Section (Updated with Read More/Less) -->
+<section class="bg-light py-5">
+  <div class="container">
+    <h2 class="text-center mb-5">What Our Students Say</h2>
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+      <div class="col">
+        <div class="card h-100 text-center">
+          <img src="Prabhat.jpeg" class="card-img-top rounded-circle mx-auto mt-4" alt="Student 1" style="width:80px; height:80px; object-fit:cover;">
+          <div class="card-body">
+            <h5 class="card-title">Prabhat Sharma</h5>
+            <p class="card-text">The structured lectures and personal mentorship really helped me stay focused. <span class="collapse" id="testimonial1">website gavthe confidence to crack the exam and I am truly thankful for their support throughout the journey.</span></p>
+            <button class="btn btn-link p-0" data-bs-toggle="collapse" data-bs-target="#testimonial1" aria-expanded="false" onclick="this.textContent = this.textContent === 'Read More' ? 'Read Less' : 'Read More';">Read More</button>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card h-100 text-center">
+          <img src="Sudhir.jpeg" class="card-img-top rounded-circle mx-auto mt-4" alt="Student 2" style="width:80px; height:80px; object-fit:cover;">
+          <div class="card-body">
+            <h5 class="card-title">Amit Patel</h5>
+            <p class="card-text">The mocks and strategy sessions were spot on. <span class="collapse" id="testimonial2">The mentors guided me very well, helping me strengthen weak areas and gain clarity on the concepts.</span></p>
+            <button class="btn btn-link p-0" data-bs-toggle="collapse" data-bs-target="#testimonial2" aria-expanded="false" onclick="this.textContent = this.textContent === 'Read More' ? 'Read Less' : 'Read More';">Read More</button>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card h-100 text-center">
+          <img src="Shrushti.jpeg" class="card-img-top rounded-circle mx-auto mt-4" alt="Student 3" style="width:80px; height:80px; object-fit:cover;">
+          <div class="card-body">
+            <h5 class="card-title">Sneha Kulkarni</h5>
+            <p class="card-text">One of the best faculties and support system. <span class="collapse" id="testimonial3">I never felt alone in the journey—website wasys there to answer and guide me to success.</span></p>
+            <button class="btn btn-link p-0" data-bs-toggle="collapse" data-bs-target="#testimonial3" aria-expanded="false" onclick="this.textContent = this.textContent === 'Read More' ? 'Read Less' : 'Read More';">Read More</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- Information Cards Section -->
+<section class="container my-5">
+  <div class="row text-center">
+    <div class="col-md-4 mb-4">
+      <div class="card shadow-sm p-4 h-100">
+        <h5 class="mb-3">Free Study Material</h5>
+        <img src="study-icon.png" alt="Study Material Icon" width="50" class="mb-2">
+        <a href="#" class="btn btn-dark rounded-circle mt-3">
+          <i class="fas fa-arrow-right text-white"></i>
+        </a>
+      </div>
+    </div>
+
+    <div class="col-md-4 mb-4">
+      <div class="card shadow-sm p-4 h-100 bg-primary text-white">
+        <h5 class="mb-3">Daily General Knowledge</h5>
+        <img src="gk-icon.png" alt="GK Icon" width="50" class="mb-2">
+        <a href="#" class="btn btn-light rounded-circle mt-3">
+          <i class="fas fa-arrow-right text-dark"></i>
+        </a>
+      </div>
+    </div>
+
+    <div class="col-md-4 mb-4">
+      <div class="card shadow-sm p-4 h-100">
+        <h5 class="mb-3">Exam Notification</h5>
+        <img src="notification-icon.png" alt="Notification Icon" width="50" class="mb-2">
+        <a href="#" class="btn btn-dark rounded-circle mt-3">
+          <i class="fas fa-arrow-right text-white"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Newsletter Subscription -->
+<section class="bg-success py-4 text-white">
+  <div class="container d-md-flex align-items-center justify-content-between">
+    <h5 class="mb-3 mb-md-0">Find out about the latest courses with the website newer.</h5>
+    <form class="d-flex" role="form">
+      <input type="email" class="form-control me-2" placeholder="Enter Email" required>
+      <button class="btn btn-dark">Submit</button>
+    </form>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="text-white text-center p-4">
+  &copy; 2025 website. All rights reserved.
+</footer>
+
+<!-- WhatsApp Floating Button -->
+<a href="https://wa.me/918828581455" target="_blank" class="floating-whatsapp">
+  <i class="bi bi-whatsapp"></i>
+</a>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script>
+  new Swiper('.swiper', {
+    loop: true,
+    autoplay: { delay: 2000 },
+    slidesPerView: 1,
+    breakpoints: {
+      768: { slidesPerView: 2 },
+      1024: { slidesPerView: 3 }
+    }
+  });
+</script>
+<script>
+  document.querySelectorAll('.carousel-item').forEach(function(card) {
+    const btn = card.querySelector('.read-toggle');
+    const text = card.querySelector('.testimonial-text');
+    const fullText = text.textContent;
+    const shortText = fullText.substring(0, 100) + '...';
+
+    text.textContent = shortText;
+    let expanded = false;
+
+    btn.addEventListener('click', function() {
+      if (expanded) {
+        text.textContent = shortText;
+        btn.textContent = 'Read More';
+      } else {
+        text.textContent = fullText;
+        btn.textContent = 'Read Less';
+      }
+      expanded = !expanded;
+    });
+  });
+
+  document.getElementById("courseFilter").addEventListener("input", function () {
+      const query = this.value.toLowerCase();
+      document.querySelectorAll("#courseList .card").forEach(card => {
+        const title = card.querySelector(".card-title").textContent.toLowerCase();
+        card.parentElement.style.display = title.includes(query) ? "block" : "none";
+      });
+    });
+
+    // Bootstrap form validation
+  (function () {
+    'use strict';
+    var forms = document.querySelectorAll('form');
+    Array.prototype.slice.call(forms).forEach(function (form) {
+      form.addEventListener('submit', function (event) {
+        if (!form.checkValidity()) {
+          event.preventDefault();
+          event.stopPropagation();
+        }
+        form.classList.add('was-validated');
+      }, false);
+    });
+  })();
+</script>
+</script>
+</body>
+</html>
