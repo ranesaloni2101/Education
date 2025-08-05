@@ -1,0 +1,786 @@
+-<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>websiteEdu - Success Stories</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .top-bar {
+      background: green;
+      color: white;
+      padding: 5px 20px;
+      font-size: 14px;
+    }
+    .top-bar span {
+      margin-right: 20px;
+    }
+        .navbar-brand img {
+            height: 40px;
+        }
+
+        .success-title {
+            text-align: center;
+            margin: 30px 0 20px;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .highlight-number {
+            color: green;
+        }
+        .navbar {
+      padding: 10px 20px;
+      color: white;
+    }
+    .navbar .nav-link {
+    color: white !important;
+  }
+    .btn-login {
+      background-color: #c9e265;
+      color: black;
+      padding: 8px 16px;
+      border: none;
+    }
+    /* Hover dropdown support */
+.hover-dropdown:hover .dropdown-menu {
+  display: block;
+  margin-top: 0;
+}
+
+.hover-dropdown .dropdown-toggle::after {
+  transition: transform 0.2s;
+}
+.hover-dropdown:hover .dropdown-toggle::after {
+  transform: rotate(180deg);
+}
+        .whatsapp-icon, .call-icon {
+            position: fixed;
+            bottom: 20px;
+            font-size: 32px;
+            z-index: 1000;
+        }
+
+        .whatsapp-icon {
+            left: 20px;
+            color: #25D366;
+        }
+
+        .call-icon {
+            left: 70px;
+            color: orange;
+        }
+
+         /* Card carousel styles */
+        .carousel-wrapper {
+            position: relative;
+            margin: 30px auto;
+            max-width: 1200px;
+            overflow-x: auto;
+            display: flex;
+            gap: 20px;
+            padding: 0 40px;
+        }
+
+        .video-card {
+            width: 220px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            overflow: hidden;
+            position: relative;
+        }
+
+        .video-thumbnail {
+            width: 100%;
+            height: 180px;
+            background-color: #e0e0e0;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .video-thumbnail img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .play-btn {
+            position: absolute;
+            font-size: 32px;
+            color: #fff;
+            background: rgba(0, 0, 0, 0.6);
+            border-radius: 50%;
+            padding: 10px;
+            cursor: pointer;
+        }
+
+        .video-content {
+            padding: 12px;
+            text-align: center;
+        }
+
+        .video-content h6 {
+            margin: 0;
+            font-size: 16px;
+            font-weight: 600;
+        }
+
+        .video-content p {
+            margin: 4px 0;
+            font-size: 14px;
+            color: #333;
+        }
+
+        .btn-institute {
+            background-color: #114b89;
+            color: #fff;
+            font-size: 13px;
+            padding: 5px 10px;
+            border-radius: 4px;
+            margin-top: 5px;
+        }
+
+        /* Arrows */
+        .arrow-left, .arrow-right {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 26px;
+            background: #fff;
+            border-radius: 50%;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+            padding: 5px 10px;
+            cursor: pointer;
+            z-index: 10;
+        }
+
+        .arrow-left {
+            left: 10px;
+        }
+
+        .arrow-right {
+            right: 10px;
+        }
+        .footer {
+      background-color: #003366;
+      color: white;
+      padding: 40px 0;
+    }
+    .footer a {
+      color: white;
+      text-decoration: none;
+    }
+    .footer h5 {
+      border-bottom: 2px solid #8dc63f;
+      display: inline-block;
+      padding-bottom: 5px;
+    }
+    .carousel-wrapper {
+    display: flex;
+    overflow-x: auto;
+    gap: 20px;
+    padding: 20px 40px;
+    scroll-behavior: smooth;
+}
+
+.carousel-wrapper::-webkit-scrollbar {
+    display: none;
+}
+
+.video-card {
+    min-width: 220px;
+    max-width: 250px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+}
+
+.video-card:hover {
+    transform: scale(1.03);
+}
+
+.arrow-left,
+.arrow-right {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 26px;
+    background: #fff;
+    border-radius: 50%;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    padding: 5px 10px;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.arrow-left {
+    left: 10px;
+}
+
+.arrow-right {
+    right: 10px;
+}
+.section-title {
+      text-align: center;
+      padding: 20px;
+      font-size: 22px;
+      font-weight: 600;
+    }
+
+    .slider-container {
+      position: relative;
+      padding: 0 40px;
+      max-width: 100%;
+      overflow: hidden;
+    }
+
+    .cards-wrapper {
+      display: flex;
+      overflow-x: auto;
+      scroll-behavior: smooth;
+      gap: 20px;
+      padding: 20px 0;
+    }
+
+    .cards-wrapper::-webkit-scrollbar {
+      display: none;
+    }
+
+    .result-card {
+      flex: 0 0 300px;
+      background: radial-gradient(circle at top, #001F5F, #012b75);
+      border-radius: 15px;
+      color: white;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+      padding-bottom: 10px;
+      text-align: center;
+      position: relative;
+      transition: transform 0.3s;
+    }
+
+    .result-card:hover {
+      transform: scale(1.03);
+    }
+
+    .result-card img {
+      width: 100px;
+      height: 100px;
+      margin-top: 20px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid white;
+    }
+
+    .result-card h3 {
+      margin: 10px 0 5px;
+      font-size: 18px;
+    }
+
+    .result-card p {
+      margin: 0;
+      font-size: 14px;
+    }
+
+    .result-card a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .slider-arrow {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 26px;
+      color: #fff;
+      background: #001f5f;
+      border-radius: 50%;
+      padding: 10px;
+      cursor: pointer;
+      z-index: 10;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+    }
+
+    .arrow-left {
+      left: 5px;
+    }
+
+    .arrow-right {
+      right: 5px;
+    }
+
+    @media screen and (max-width: 768px) {
+      .result-card {
+        flex: 0 0 250px;
+      }
+      .slider-container {
+        padding: 0 10px;
+      }
+    }
+    </style>
+</head>
+<body>
+<!-- Top Bar -->
+  <div class="top-bar d-flex justify-content-between">
+    <div>
+      <span>Enquiry: +91 8828581455</span>
+      <span>Support: +91 8857945882</span>
+      <span>| 10:00 AM - 07:00 PM</span>
+    </div>
+  </div>
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg px-3" style="background-color: #003366;">
+  <div class="container-fluid">
+    <!-- Logo -->
+    <a class="navbar-brand" href="#">
+      <img src="https://website.com/assets/images/logo.png" alt="Logo" height="40">
+    </a>
+
+    <!-- Toggler for mobile -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Navbar content -->
+    <div class="collapse navbar-collapse" id="mainNavbar">
+      <!-- Buy Course Dropdown -->
+      <div class="dropdown me-3 hover-dropdown">
+  <button class="btn btn-warning dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+    BUY COURSE
+  </button>
+  <ul class="dropdown-menu">
+    <li><a class="dropdown-item" href="#">MBA Entrance</a></li>
+    <li><a class="dropdown-item" href="#">LAW Entrance</a></li>
+    <li><a class="dropdown-item" href="#">MCA Entrance</a></li>
+    <li><a class="dropdown-item" href="#">TISS Entrance</a></li>
+    <li><a class="dropdown-item" href="#">BBA Entrance</a></li>
+    <li><a class="dropdown-item" href="#">Hotel Management</a></li>
+  </ul>
+</div>
+
+
+
+      <!-- Main nav links -->
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0 ">
+        <li class="nav-item text-white" ><a class="nav-link" href="#">HOME</a></li>
+        <li class="nav-item text-white"><a class="nav-link" href="#">RESULT</a></li>
+        <li class="nav-item dropdown hover-dropdown">
+  <a class="nav-link dropdown-toggle" href="#" id="connectUsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    CONNECT US
+  </a>
+  <ul class="dropdown-menu" aria-labelledby="connectUsDropdown">
+    <li><a class="dropdown-item" href="#contact-us">Contact Us</a></li>
+    <li><a class="dropdown-item" href="#course-enquiry">Courses Enquiry</a></li>
+    <li><a class="dropdown-item" href="#support">Support / Help</a></li>
+    <li><a class="dropdown-item" href="#b2b">B2B Associate</a></li>
+  </ul>
+</li>
+        <li class="nav-item text-white"><a class="nav-link" href="#">DEMO LECTURES</a></li>
+        <li class="nav-item dropdown hover-dropdown">
+  <a class="nav-link dropdown-toggle" href="#" id="otherDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    OTHER
+  </a>
+  <ul class="dropdown-menu" aria-labelledby="otherDropdown">
+    <li><a class="dropdown-item" href="#blog">Blog</a></li>
+    <li><a class="dropdown-item" href="#career">Career</a></li>
+    <li><a class="dropdown-item" href="#gallery">Gallery</a></li>
+  </ul>
+</li>
+      </ul>
+
+      <!-- Cart and Login -->
+      <div class="d-flex align-items-center">
+        <!-- Cart Icon -->
+        <div class="position-relative me-3">
+          <img src="https://img.icons8.com/ios-filled/24/ffffff/shopping-cart.png" alt="Cart" />
+          <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+            0
+          </span>
+        </div>
+
+        <!-- Login Button -->
+        <button class="btn btn-outline-warning bg-warning text-white" data-bs-toggle="modal" data-bs-target="#loginModal">Login / Register</button>
+        <!-- Login Modal -->
+<div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content d-flex flex-md-row">
+      <!-- Login Form -->
+      <div class="modal-body p-4 w-100">
+        <h5 class="mb-3 text-success">Welcome to <span class="text-success fw-bold">Institute</span></h5>
+        <button type="button" class="btn-close position-absolute top-0 end-0 m-3" data-bs-dismiss="modal" aria-label="Close"></button>
+        <form id="loginForm" novalidate>
+          <div class="mb-3">
+            <label for="email" class="form-label">Email address</label>
+            <input type="email" class="form-control" id="email" required>
+            <div class="invalid-feedback">Please enter a valid email.</div>
+          </div>
+          <div class="mb-3">
+            <label for="password" class="form-label">Password</label>
+            <input type="password" class="form-control" id="password" required>
+            <div class="invalid-feedback">Please enter your password.</div>
+          </div>
+          <div class="form-check mb-3">
+            <input class="form-check-input" type="checkbox" id="remember">
+            <label class="form-check-label" for="remember">Remember me</label>
+          </div>
+          <button type="submit" class="btn btn-success w-100">Login</button>
+          <p class="text-center mt-3">
+            Don't have an account? 
+            <a href="#" data-bs-toggle="modal" data-bs-target="#registerModal" data-bs-dismiss="modal">Register Now..!</a>
+          </p>
+        </form>
+      </div>
+      
+    </div>
+  </div>
+</div>
+<!-- Register Modal -->
+<div class="modal fade" id="registerModal" tabindex="-1" aria-labelledby="registerModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content p-4">
+      <h5 class="mb-3 text-success">Register with <span class="text-success fw-bold">Institute</span></h5>
+      <button type="button" class="btn-close position-absolute top-0 end-0 m-3" data-bs-dismiss="modal" aria-label="Close"></button>
+      <form id="registerForm" novalidate>
+        <div class="mb-3">
+          <label for="regName" class="form-label">Full Name</label>
+          <input type="text" class="form-control" id="regName" required>
+          <div class="invalid-feedback">Enter your name.</div>
+        </div>
+        <div class="mb-3">
+          <label for="regEmail" class="form-label">Email</label>
+          <input type="email" class="form-control" id="regEmail" required>
+          <div class="invalid-feedback">Enter a valid email.</div>
+        </div>
+        <div class="mb-3">
+          <label for="regPassword" class="form-label">Password</label>
+          <input type="password" class="form-control" id="regPassword" required>
+          <div class="invalid-feedback">Enter a password.</div>
+        </div>
+        <button type="submit" class="btn btn-success w-100">Register</button>
+      </form>
+    </div>
+  </div>
+</div>
+
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- Success Stories Title -->
+<div class="success-title">
+    Get Inspired by <span class="highlight-number">11</span> Success Stories
+</div>
+
+<!-- Card Carousel -->
+<div class="position-relative mt-4">
+    <div class="arrow-left" onclick="scrollLeft()">&#8592;</div>
+    <div class="carousel-wrapper" id="carousel">
+        <!-- Card 1 -->
+        <div class="video-card">
+            <div class="video-thumbnail">
+                <img src="https://via.placeholder.com/220x180.png?text=Jarvia+Gupta" alt="Jarvia">
+                <div class="play-btn"><i class="bi bi-play-fill"></i></div>
+            </div>
+            <div class="video-content">
+                <h6>John Malle</h6>
+                <p>NCHMCT JEE - AIR 1</p>
+                <div class="btn-institute">Institute : IHM PUSA</div>
+            </div>
+        </div>
+
+        <!-- Duplicate and edit more cards as needed -->
+        <div class="video-card">
+            <div class="video-thumbnail">
+                <img src="https://via.placeholder.com/220x180.png?text=Rohan+Majee" alt="Rohan">
+                <div class="play-btn"><i class="bi bi-play-fill"></i></div>
+            </div>
+            <div class="video-content">
+                <h6>Richard kari</h6>
+                <p>TISS - 280</p>
+                <div class="btn-institute">Institute : Tata Inst.</div>
+            </div>
+        </div>
+
+        <div class="video-card">
+            <div class="video-thumbnail">
+                <img src="https://via.placeholder.com/220x180.png?text=Sayan+Dowari" alt="Sayan">
+                <div class="play-btn"><i class="bi bi-play-fill"></i></div>
+            </div>
+            <div class="video-content">
+                <h6>Sachi Berden</h6>
+                <p>NCHMCT JEE 202...</p>
+                <div class="btn-institute">Institute : IHM Pusa</div>
+            </div>
+        </div>
+
+        <div class="video-card">
+            <div class="video-thumbnail">
+                <img src="https://via.placeholder.com/220x180.png?text=Nakshatra+Pain" alt="Nakshatra">
+                <div class="play-btn"><i class="bi bi-play-fill"></i></div>
+            </div>
+            <div class="video-content">
+                <h6>Nancy Halt</h6>
+                <p>MHCET LAW 5Yrs...</p>
+                <div class="btn-institute">Institute : GLC Mumbai</div>
+            </div>
+        </div>
+
+        <div class="video-card">
+            <div class="video-thumbnail">
+                <img src="https://via.placeholder.com/220x180.png?text=Parash" alt="Parash">
+                <div class="play-btn"><i class="bi bi-play-fill"></i></div>
+            </div>
+            <div class="video-content">
+                <h6>Patrick nauvel</h6>
+                <p>MBA CMAT 2024 -...</p>
+                <div class="btn-institute">Institute : IIM Shillong</div>
+            </div>
+        </div>
+
+        <div class="video-card">
+            <div class="video-thumbnail">
+                <img src="https://via.placeholder.com/220x180.png?text=Parash" alt="Parash">
+                <div class="play-btn"><i class="bi bi-play-fill"></i></div>
+            </div>
+            <div class="video-content">
+                <h6>Prisha</h6>
+                <p>MBA CMAT 2024 -...</p>
+                <div class="btn-institute">Institute : IIM Shillong</div>
+            </div>
+        </div>
+    </div>
+    <div class="arrow-right" onclick="scrollRight()">&#8594;</div>
+</div>
+<section class="bg-success text-white py-5 position-relative" style="background: url(bg4.jpg);">
+  <div class="container text-center">
+    <h4 class="text-uppercase">websiteEdu</h4>
+    <h1 class="fw-bold">The Most Comprehensive Exam Preparation Platform</h1>
+    <button class="btn btn-primary my-3">Download Now</button><br>
+  </div>
+</section>
+
+<!-- =================== RESULT SECTION =================== -->
+<div class="py-5" style="background: linear-gradient(135deg, #d5f4e6, #80ced6);">
+    <div class="container-fluid">
+        <div class="success-title mb-4">
+            Explore Our <span class="highlight-number">Courses</span>
+        </div>
+
+        <div class="position-relative">
+            <div class="arrow-left d-none d-md-block" onclick="scrollLeftResult()">&#8592;</div>
+            <div class="carousel-wrapper" id="resultCarousel">
+                <!-- Repeatable Clickable Course Cards -->
+                <a href="mba-entrance.html" class="text-decoration-none">
+                    <div class="video-card bg-white text-center">
+                        <div class="video-content py-4">
+                            <h6 class="text-dark">MBA Entrance</h6>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="mca-entrance.html" class="text-decoration-none">
+                    <div class="video-card bg-white text-center">
+                        <div class="video-content py-4">
+                            <h6 class="text-dark">MCA Entrance</h6>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="hotel-management.html" class="text-decoration-none">
+                    <div class="video-card bg-white text-center">
+                        <div class="video-content py-4">
+                            <h6 class="text-dark">Hotel Management</h6>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="law-entrance.html" class="text-decoration-none">
+                    <div class="video-card bg-white text-center">
+                        <div class="video-content py-4">
+                            <h6 class="text-dark">Law Entrance (CLAT)</h6>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="tiss-net.html" class="text-decoration-none">
+                    <div class="video-card bg-white text-center">
+                        <div class="video-content py-4">
+                            <h6 class="text-dark">TISS NET</h6>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="bba-entrance.html" class="text-decoration-none">
+                    <div class="video-card bg-white text-center">
+                        <div class="video-content py-4">
+                            <h6 class="text-dark">BBA Entrance</h6>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="iim-ipm.html" class="text-decoration-none">
+                    <div class="video-card bg-white text-center">
+                        <div class="video-content py-4">
+                            <h6 class="text-dark">IIM IPM</h6>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="mass-communication.html" class="text-decoration-none">
+                    <div class="video-card bg-white text-center">
+                        <div class="video-content py-4">
+                            <h6 class="text-dark">Mass Communication</h6>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="banking.html" class="text-decoration-none">
+                    <div class="video-card bg-white text-center">
+                        <div class="video-content py-4">
+                            <h6 class="text-dark">Banking Exams</h6>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="railway-ssc.html" class="text-decoration-none">
+                    <div class="video-card bg-white text-center">
+                        <div class="video-content py-4">
+                            <h6 class="text-dark">Railway & SSC</h6>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="arrow-right d-none d-md-block" onclick="scrollRightResult()">&#8594;</div>
+        </div>
+    </div>
+</div>
+<h2 class="section-title">All Entrance Inspiring Success Stories</h2>
+
+  <div class="slider-container">
+    <div class="slider-arrow arrow-left" onclick="scrollLeft()">
+      <i class="fas fa-chevron-left"></i>
+    </div>
+    
+    <div class="cards-wrapper" id="cardSlider">
+      <!-- Sample Cards -->
+      <a href="#" class="result-card">
+        <img src="https://via.placeholder.com/100" alt="Student">
+        <h3>Ishanee Nag</h3>
+        <p>Selected in IHM PUSA</p>
+        <p>Exam Cleared: NCHMCT JEE | Hotel Management</p>
+      </a>
+      <a href="#" class="result-card">
+        <img src="https://via.placeholder.com/100" alt="Student">
+        <h3>Sayan Dowari</h3>
+        <p>Selected in IHM-PUSA</p>
+        <p>Exam Cleared: NCHMCT JEE | Hotel Management</p>
+      </a>
+      <a href="#" class="result-card">
+        <img src="https://via.placeholder.com/100" alt="Student">
+        <h3>Rishi Kamdar</h3>
+        <p>Selected in NMIMS NAVI MUMBAI</p>
+        <p>Exam Cleared: NPAT | BBA Entrance</p>
+      </a>
+      <a href="#" class="result-card">
+        <img src="https://via.placeholder.com/100" alt="Student">
+        <h3>Nakshatra Pain</h3>
+        <p>Selected in GLC</p>
+        <p>Exam Cleared: MH CET LAW 3YRS | LAW Entrance</p>
+      </a>
+      <a href="#" class="result-card">
+        <img src="https://via.placeholder.com/100" alt="Student">
+        <h3>Aman</h3>
+        <p>Selected in GLC</p>
+        <p>Exam Cleared: MH CET LAW 3YRS | LAW Entrance</p>
+      </a>
+      <a href="#" class="result-card">
+        <img src="https://via.placeholder.com/100" alt="Student">
+        <h3>Utkarsh Rajput</h3>
+        <p>Selected in PCCOE</p>
+        <p>Exam Cleared: MCA CET | MCA Entrance</p>
+      </a>
+      <!-- Add more cards below as needed -->
+    </div>
+
+    <div class="slider-arrow arrow-right" onclick="scrollRight()">
+      <i class="fas fa-chevron-right"></i>
+    </div>
+  </div>
+<!-- Floating Buttons -->
+<div class="whatsapp-icon">
+    <i class="bi bi-whatsapp"></i>
+</div>
+<div class="call-icon">
+    <i class="bi bi-telephone-fill"></i>
+</div>
+<!-- Footer -->
+<footer class="footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4 mb-3">
+        <img src="logo.png" alt="Logo" height="40">
+        <p class="mt-3">Empowering learners through innovative e-learning solutions.</p>
+      </div>
+      <div class="col-md-4 mb-3">
+        <h5>Quick Links</h5>
+        <ul class="list-unstyled">
+          <li><a href="#">Home</a></li>
+          <li><a href="">Career</a></li>
+          <li><a href="">Result</a></li>
+          <li><a href="">Event</a></li>
+          <li><a href="">Contact US</a></li>
+        </ul>
+      </div>
+      <div class="col-md-4 mb-3">
+        <h5>Resources</h5>
+        <ul class="list-unstyled">
+          <li><a href="#">Gallery</a></li>
+          <li><a href="">Blog</a></li>
+          <li><a href="">Support</a></li>
+          <li><a href="">Course Enquiry</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</footer>
+<!-- Bootstrap JS & Icons -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+
+<script>
+    function scrollLeft() {
+        document.getElementById('carousel').scrollBy({ left: -300, behavior: 'smooth' });
+    }
+
+    function scrollRight() {
+        document.getElementById('carousel').scrollBy({ left: 300, behavior: 'smooth' });
+    }
+</script>
+<!-- SCROLL SCRIPT FOR RESULT CAROUSEL -->
+<script>
+    function scrollLeftResult() {
+        document.getElementById('resultCarousel').scrollBy({ left: -300, behavior: 'smooth' });
+    }
+
+    function scrollRightResult() {
+        document.getElementById('resultCarousel').scrollBy({ left: 300, behavior: 'smooth' });
+    }
+    function scrollLeft() {
+      document.getElementById('cardSlider').scrollBy({ left: -320, behavior: 'smooth' });
+    }
+
+    function scrollRight() {
+      document.getElementById('cardSlider').scrollBy({ left: 320, behavior: 'smooth' });
+    }
+</script>
+</body>
+</html>
