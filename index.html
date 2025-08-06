@@ -6,7 +6,6 @@
   <title>Website</title>
   <!-- Bootstrap CSS -->
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-
 <!-- Bootstrap JS Bundle (includes Popper) -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"/>
@@ -54,32 +53,15 @@
 .hover-dropdown:hover .dropdown-toggle::after {
   transform: rotate(180deg);
 }
-    .hero-section {
-      padding: 40px 20px;
-      text-align: center;
-      background-image: url(bg.jpg); /* Replace with your image */
-      background-size: cover;
-      background-position: center;
-      height: 55vh;
-      position: relative;
-      padding: 2rem;
-    }
-    .hero-section h1 {
-      font-size: 2.5rem;
-      color: #00306e;
-      font-weight: bold;
-    }
-    .hero-section h2 {
-      background: #00306e;
-      color: white;
-      padding: 10px;
-      display: inline-block;
-      border-radius: 8px;
-    }
-    .hero-section p {
-      font-size: 18px;
-      margin-top: 20px;
-    }
+
+.hero-slide {
+  height: 50vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 3rem;
+}
+
     .course-selector {
       background: #fff;
       padding: 20px;
@@ -254,15 +236,6 @@
   .mentor-section {
     text-align: center;
   }
-  .hero-section p{
-    font-size: 15px;
-  }
-  .hero-section h1{
-    font-size: 20px;
-  }
-  .hero-section{
-    height: 400px;
-  }
 }
 .text-success { color: #8BC53F; }
   .text-primary { color: #003366; }
@@ -350,14 +323,32 @@
 </div>
 
 
-
       <!-- Main nav links -->
       <ul class="navbar-nav me-auto mb-2 mb-lg-0 ">
-        <li class="nav-item text-white" ><a class="nav-link" href="#">HOME</a></li>
+        <li class="nav-item text-white" ><a class="nav-link" href="index.html">HOME</a></li>
         <li class="nav-item text-white"><a class="nav-link" href="result.html">RESULT</a></li>
-        <li class="nav-item text-white"><a class="nav-link" href="#">CONNECT US</a></li>
+                <li class="nav-item dropdown hover-dropdown">
+  <a class="nav-link dropdown-toggle" href="#" id="connectUsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    CONNECT US
+  </a>
+  <ul class="dropdown-menu" aria-labelledby="connectUsDropdown">
+    <li><a class="dropdown-item" href="contact.html">Contact Us</a></li>
+    <li><a class="dropdown-item" href="course_enquiry.html">Courses Enquiry</a></li>
+    <li><a class="dropdown-item" href="#support">Support / Help</a></li>
+    <li><a class="dropdown-item" href="#b2b">B2B Associate</a></li>
+  </ul>
+</li>
         <li class="nav-item text-white"><a class="nav-link" href="#">DEMO LECTURES</a></li>
-        <li class="nav-item text-white"><a class="nav-link" href="#">OTHER</a></li>
+        <li class="nav-item dropdown hover-dropdown">
+  <a class="nav-link dropdown-toggle" href="#" id="otherDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    OTHER
+  </a>
+  <ul class="dropdown-menu" aria-labelledby="otherDropdown">
+    <li><a class="dropdown-item" href="#blog">Blog</a></li>
+    <li><a class="dropdown-item" href="#career">Career</a></li>
+    <li><a class="dropdown-item" href="#gallery">Gallery</a></li>
+  </ul>
+</li>
       </ul>
 
       <!-- Cart and Login -->
@@ -440,16 +431,69 @@
 </nav>
 
 
-  <!-- Hero Banner -->
-  <div class="hero-section">
-    <p><em>“National Council for Hotel Management and Catering Technology Joint Entrance Examination”</em></p>
-    <h1>Start your <span style="color: #00306e;">NCHMCT JEE Prep.</span></h1>
-    <h2>Marathon Batch 2026–27</h2>
-    <p>
-      Lectures • Recorded Lectures • Books (Study Materials) • Exam Level Mocktest • Strategy & Guidance
-    </p>
-    <button class="btn btn-dark mt-3">ENROLL NOW</button>
+  <!-- Bootstrap Carousel for Hero Section -->
+<div id="heroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="4000">
+  <div class="carousel-inner">
+
+    <!-- Slide 1 -->
+    <div class="carousel-item active">
+      <div class="hero-slide d-flex align-items-center justify-content-center text-center text-blue" style="background-image: url(bg.jpg);">
+        <div>
+          <p><em>“National Council for Hotel Management and Catering Technology Joint Entrance Examination”</em></p>
+          <h1>Start your <span style="color: #216d03;">NCHMCT JEE Prep.</span></h1>
+          <h2>Marathon Batch 2026–27</h2>
+          <p>Lectures • Recorded Lectures • Books • Mocktests • Strategy</p>
+          <button class="btn btn-warning mt-3">ENROLL NOW</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Slide 2 -->
+    <div class="carousel-item">
+      <div class="hero-slide d-flex align-items-center justify-content-center text-center text-blue" style="background-image: url(bg1.jpg);">
+        <div>
+          <p><em>“Crack MBA Exams with Confidence”</em></p>
+          <h1>Join our <span style="color: #ffc107;">CAT/CMAT Batches</span></h1>
+          <h2>Expert Mentorship + Test Series</h2>
+          <p>Live Classes • Study Material • Guidance • Mock Interviews</p>
+          <button class="btn btn-warning mt-3">JOIN NOW</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Slide 3 -->
+    <div class="carousel-item">
+      <div class="hero-slide d-flex align-items-center justify-content-center text-center text-blue" style="background-image: url(bg2.jpg);">
+        <div>
+          <p><em>“TISS NET / BBA Entrance Masterclass”</em></p>
+          <h1>New <span style="color: #ffc107;">Batches Launching</span></h1>
+          <h2>Admissions Open 2026</h2>
+          <p>Strategy • Expert Faculty • Daily Practice</p>
+          <button class="btn btn-warning mt-3">ENROLL TODAY</button>
+        </div>
+      </div>
+    </div>
+
   </div>
+
+  <!-- Indicators -->
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active"></button>
+    <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1"></button>
+    <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2"></button>
+  </div>
+
+  <!-- Navigation Arrows -->
+  <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+
 
   <!-- Course Selector -->
   <div class="course-selector">
@@ -528,23 +572,243 @@
     </div>
   </div>
 
-  <div id="law" class="sub-course-list" style="display:none;">
-    <div class="exam-card"><span>LAW Entrance courses coming soon...</span></div>
+  <!-- All Sub-Categories (Only One Visible at a Time) -->
+  <div id="law" class="sub-course-list">
+    <div class="row g-3">
+      <!-- Example Exam Cards (Add more as needed) -->
+      <div class="col-md-4">
+        <div class="exam-card d-flex align-items-center p-3 border rounded">
+          <img src="https://img.icons8.com/color/48/graduation-cap.png" alt="All MBA" class="me-3">
+          <span>All LAW Exams</span>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="exam-card d-flex align-items-center p-3 border rounded">
+          <img src="https://img.icons8.com/ios-filled/50/cat-footprint.png" alt="CAT" class="me-3">
+          <span>CLAT</span>
+        </div>
+      </div>
+      <!-- Add more cards here -->
+       <div class="col-md-4">
+        <div class="exam-card d-flex align-items-center p-3 border rounded">
+          <img src="https://img.icons8.com/ios-filled/50/xat.png" alt="CAT" class="me-3">
+          <span>MHCET LAW 5YRS</span>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="exam-card d-flex align-items-center p-3 border rounded">
+          <img src="https://img.icons8.com/ios-filled/50/snapchat.png" alt="CAT" class="me-3">
+          <span>SLAT</span>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="exam-card d-flex align-items-center p-3 border rounded">
+          <img src="https://img.icons8.com/ios-filled/50/books.png" alt="CAT" class="me-3">
+          <span>AILET</span>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="exam-card d-flex align-items-center p-3 border rounded">
+          <img src="https://img.icons8.com/ios-filled/50/google-forms.png" alt="CAT" class="me-3">
+          <span>CUTE LAW PG</span>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="exam-card d-flex align-items-center p-3 border rounded">
+          <img src="https://img.icons8.com/ios-filled/50/google-forms.png" alt="CAT" class="me-3">
+          <span>LSAT</span>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="exam-card d-flex align-items-center p-3 border rounded">
+          <img src="https://img.icons8.com/ios-filled/50/mat.png" alt="CAT" class="me-3">
+          <span>NLAT</span>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="exam-card d-flex align-items-center p-3 border rounded">
+          <img src="https://img.icons8.com/ios-filled/50/mat.png" alt="CAT" class="me-3">
+          <span>CHRIST(CULEE)</span>
+        </div>
+      </div>
+    </div>
   </div>
   <div id="mca" class="sub-course-list" style="display:none;">
-    <div class="exam-card"><span>MCA Entrance courses coming soon...</span></div>
+    <div class="row g-3">
+      <!-- Example Exam Cards (Add more as needed) -->
+      <div class="col-md-4">
+        <div class="exam-card d-flex align-items-center p-3 border rounded">
+          <img src="https://img.icons8.com/color/48/graduation-cap.png" alt="All MBA" class="me-3">
+          <span>All MCA Exams</span>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="exam-card d-flex align-items-center p-3 border rounded">
+          <img src="https://img.icons8.com/ios-filled/50/cat-footprint.png" alt="CAT" class="me-3">
+          <span>MCACET</span>
+        </div>
+      </div>
+      <!-- Add more cards here -->
+       <div class="col-md-4">
+        <div class="exam-card d-flex align-items-center p-3 border rounded">
+          <img src="https://img.icons8.com/ios-filled/50/xat.png" alt="CAT" class="me-3">
+          <span>NIMCET</span>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="exam-card d-flex align-items-center p-3 border rounded">
+          <img src="https://img.icons8.com/ios-filled/50/google-forms.png" alt="CAT" class="me-3">
+          <span>CUTE PG MCA</span>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="exam-card d-flex align-items-center p-3 border rounded">
+          <img src="https://img.icons8.com/ios-filled/50/google-forms.png" alt="CAT" class="me-3">
+          <span>MAH BCACET</span>
+        </div>
+      </div>
+    </div>
   </div>
   <div id="tiss" class="sub-course-list" style="display:none;">
-    <div class="exam-card"><span>TISS Entrance courses coming soon...</span></div>
+    <div class="row g-3">
+      <!-- Example Exam Cards (Add more as needed) -->
+      <div class="col-md-4">
+        <div class="exam-card d-flex align-items-center p-3 border rounded">
+          <img src="https://img.icons8.com/color/48/graduation-cap.png" alt="All MBA" class="me-3">
+          <span>All TISS Exams</span>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="exam-card d-flex align-items-center p-3 border rounded">
+          <img src="https://img.icons8.com/ios-filled/50/cat-footprint.png" alt="CAT" class="me-3">
+          <span>CUTE PG COQP12</span>
+        </div>
+      </div>
+      <!-- Add more cards here -->
+       <div class="col-md-4">
+        <div class="exam-card d-flex align-items-center p-3 border rounded">
+          <img src="https://img.icons8.com/ios-filled/50/xat.png" alt="CAT" class="me-3">
+          <span>CUTE PG COQP11</span>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="exam-card d-flex align-items-center p-3 border rounded">
+          <img src="https://img.icons8.com/ios-filled/50/google-forms.png" alt="CAT" class="me-3">
+          <span>TISS CAT</span>
+        </div>
+      </div>
+    </div>
   </div>
   <div id="bba" class="sub-course-list" style="display:none;">
-    <div class="exam-card"><span>BBA Entrance courses coming soon...</span></div>
+    <div class="row g-3">
+      <!-- Example Exam Cards (Add more as needed) -->
+      <div class="col-md-4">
+        <div class="exam-card d-flex align-items-center p-3 border rounded">
+          <img src="https://img.icons8.com/color/48/graduation-cap.png" alt="All MBA" class="me-3">
+          <span>All BBA Exams</span>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="exam-card d-flex align-items-center p-3 border rounded">
+          <img src="https://img.icons8.com/ios-filled/50/cat-footprint.png" alt="CAT" class="me-3">
+          <span>IPMAT INDORE</span>
+        </div>
+      </div>
+      <!-- Add more cards here -->
+       <div class="col-md-4">
+        <div class="exam-card d-flex align-items-center p-3 border rounded">
+          <img src="https://img.icons8.com/ios-filled/50/xat.png" alt="CAT" class="me-3">
+          <span>NPAT</span>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="exam-card d-flex align-items-center p-3 border rounded">
+          <img src="https://img.icons8.com/ios-filled/50/snapchat.png" alt="CAT" class="me-3">
+          <span>SET GENERAL</span>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="exam-card d-flex align-items-center p-3 border rounded">
+          <img src="https://img.icons8.com/ios-filled/50/books.png" alt="CAT" class="me-3">
+          <span>MAH BMS-BBA-BBM-CET</span>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="exam-card d-flex align-items-center p-3 border rounded">
+          <img src="https://img.icons8.com/ios-filled/50/google-forms.png" alt="CAT" class="me-3">
+          <span>CUTE UG</span>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="exam-card d-flex align-items-center p-3 border rounded">
+          <img src="https://img.icons8.com/ios-filled/50/google-forms.png" alt="CAT" class="me-3">
+          <span>CHRIST UNIVERSITY</span>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="exam-card d-flex align-items-center p-3 border rounded">
+          <img src="https://img.icons8.com/ios-filled/50/mat.png" alt="CAT" class="me-3">
+          <span>JIPMAT</span>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="exam-card d-flex align-items-center p-3 border rounded">
+          <img src="https://img.icons8.com/ios-filled/50/mat.png" alt="CAT" class="me-3">
+          <span>IIM</span>
+        </div>
+      </div>
+    </div>
   </div>
   <div id="hotel" class="sub-course-list" style="display:none;">
-    <div class="exam-card"><span>Hotel Management courses coming soon...</span></div>
+    <div class="row g-3">
+      <!-- Example Exam Cards (Add more as needed) -->
+      <div class="col-md-4">
+        <div class="exam-card d-flex align-items-center p-3 border rounded">
+          <img src="https://img.icons8.com/color/48/graduation-cap.png" alt="All MBA" class="me-3">
+          <span>All Hotel-Management Exams</span>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="exam-card d-flex align-items-center p-3 border rounded">
+          <img src="https://img.icons8.com/ios-filled/50/cat-footprint.png" alt="CAT" class="me-3">
+          <span>NCHMCT JEE</span>
+        </div>
+      </div>
+       <div class="col-md-4">
+        <div class="exam-card d-flex align-items-center p-3 border rounded">
+          <img src="https://img.icons8.com/ios-filled/50/xat.png" alt="CAT" class="me-3">
+          <span>ECHAT</span>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="exam-card d-flex align-items-center p-3 border rounded">
+          <img src="https://img.icons8.com/ios-filled/50/google-forms.png" alt="CAT" class="me-3">
+          <span>IHM A</span>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="exam-card d-flex align-items-center p-3 border rounded">
+          <img src="https://img.icons8.com/ios-filled/50/google-forms.png" alt="CAT" class="me-3">
+          <span>MAH BHMCT CET</span>
+        </div>
+      </div>
+    </div>
   </div>
   <div id="bed" class="sub-course-list" style="display:none;">
-    <div class="exam-card"><span>B.Ed Entrance courses coming soon...</span></div>
+    <div class="row g-3">
+      <!-- Example Exam Cards (Add more as needed) -->
+      <div class="col-md-4">
+        <div class="exam-card d-flex align-items-center p-3 border rounded">
+          <img src="https://img.icons8.com/color/48/graduation-cap.png" alt="All MBA" class="me-3">
+          <span>All Hotel-Management Exams</span>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="exam-card d-flex align-items-center p-3 border rounded">
+          <img src="https://img.icons8.com/ios-filled/50/cat-footprint.png" alt="CAT" class="me-3">
+          <span>NCHMCT JEE</span>
+        </div>
+      </div>
   </div>
 </div>
 
@@ -920,4 +1184,3 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
 </body>
 </html>
-
