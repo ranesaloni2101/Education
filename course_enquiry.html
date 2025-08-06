@@ -1,0 +1,460 @@
+-<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>websiteEdu - course enquiry</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .top-bar {
+      background: green;
+      color: white;
+      padding: 5px 20px;
+      font-size: 14px;
+    }
+    .top-bar span {
+      margin-right: 20px;
+    }
+        .navbar-brand img {
+            height: 40px;
+        }
+
+        .success-title {
+            text-align: center;
+            margin: 30px 0 20px;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .highlight-number {
+            color: green;
+        }
+        .navbar {
+      padding: 10px 20px;
+      color: white;
+    }
+    .navbar .nav-link {
+    color: white !important;
+  }
+    .btn-login {
+      background-color: #c9e265;
+      color: black;
+      padding: 8px 16px;
+      border: none;
+    }
+    /* Hover dropdown support */
+.hover-dropdown:hover .dropdown-menu {
+  display: block;
+  margin-top: 0;
+}
+
+.hover-dropdown .dropdown-toggle::after {
+  transition: transform 0.2s;
+}
+.hover-dropdown:hover .dropdown-toggle::after {
+  transform: rotate(180deg);
+}
+        .whatsapp-icon, .call-icon {
+            position: fixed;
+            bottom: 20px;
+            font-size: 32px;
+            z-index: 1000;
+        }
+
+        .whatsapp-icon {
+            left: 20px;
+            color: #25D366;
+        }
+
+        .call-icon {
+            left: 70px;
+            color: orange;
+        }
+        .hero {
+      background: url(contact.jpg) center/cover no-repeat;
+      height: 30vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #003366;
+      text-shadow: 2px 2px 5px rgba(0,0,0,0.6);
+    }
+        .footer {
+      background-color: #003366;
+      color: white;
+      padding: 40px 0;
+    }
+    .footer a {
+      color: white;
+      text-decoration: none;
+    }
+    .footer h5 {
+      border-bottom: 2px solid #8dc63f;
+      display: inline-block;
+      padding-bottom: 5px;
+    }
+
+    </style>
+</head>
+<body>
+<!-- Top Bar -->
+  <div class="top-bar d-flex justify-content-between">
+    <div>
+      <span>Enquiry: +91 8828581455</span>
+      <span>Support: +91 8857945882</span>
+      <span>| 10:00 AM - 07:00 PM</span>
+    </div>
+  </div>
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg px-3" style="background-color: #003366;">
+  <div class="container-fluid">
+    <!-- Logo -->
+    <a class="navbar-brand" href="#">
+      <img src="https://website.com/assets/images/logo.png" alt="Logo" height="40">
+    </a>
+
+    <!-- Toggler for mobile -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Navbar content -->
+    <div class="collapse navbar-collapse" id="mainNavbar">
+      <!-- Buy Course Dropdown -->
+      <div class="dropdown me-3 hover-dropdown">
+  <button class="btn btn-warning dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+    BUY COURSE
+  </button>
+  <ul class="dropdown-menu">
+    <li><a class="dropdown-item" href="#">MBA Entrance</a></li>
+    <li><a class="dropdown-item" href="#">LAW Entrance</a></li>
+    <li><a class="dropdown-item" href="#">MCA Entrance</a></li>
+    <li><a class="dropdown-item" href="#">TISS Entrance</a></li>
+    <li><a class="dropdown-item" href="#">BBA Entrance</a></li>
+    <li><a class="dropdown-item" href="#">Hotel Management</a></li>
+  </ul>
+</div>
+
+
+
+      <!-- Main nav links -->
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0 ">
+        <li class="nav-item text-white" ><a class="nav-link" href="index.html">HOME</a></li>
+        <li class="nav-item text-white"><a class="nav-link" href="result.html">RESULT</a></li>
+        <li class="nav-item dropdown hover-dropdown">
+  <a class="nav-link dropdown-toggle" href="#" id="connectUsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    CONNECT US
+  </a>
+  <ul class="dropdown-menu" aria-labelledby="connectUsDropdown">
+    <li><a class="dropdown-item" href="contact.html">Contact Us</a></li>
+    <li><a class="dropdown-item" href="course_enquiry.html">Courses Enquiry</a></li>
+    <li><a class="dropdown-item" href="#support">Support / Help</a></li>
+    <li><a class="dropdown-item" href="#b2b">B2B Associate</a></li>
+  </ul>
+</li>
+        <li class="nav-item text-white"><a class="nav-link" href="#">DEMO LECTURES</a></li>
+        <li class="nav-item dropdown hover-dropdown">
+  <a class="nav-link dropdown-toggle" href="#" id="otherDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    OTHER
+  </a>
+  <ul class="dropdown-menu" aria-labelledby="otherDropdown">
+    <li><a class="dropdown-item" href="#blog">Blog</a></li>
+    <li><a class="dropdown-item" href="#career">Career</a></li>
+    <li><a class="dropdown-item" href="#gallery">Gallery</a></li>
+  </ul>
+</li>
+      </ul>
+
+      <!-- Cart and Login -->
+      <div class="d-flex align-items-center">
+        <!-- Cart Icon -->
+        <div class="position-relative me-3">
+          <img src="https://img.icons8.com/ios-filled/24/ffffff/shopping-cart.png" alt="Cart" />
+          <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+            0
+          </span>
+        </div>
+
+        <!-- Login Button -->
+        <button class="btn btn-outline-warning bg-warning text-white" data-bs-toggle="modal" data-bs-target="#loginModal">Login / Register</button>
+        <!-- Login Modal -->
+<div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content d-flex flex-md-row">
+      <!-- Login Form -->
+      <div class="modal-body p-4 w-100">
+        <h5 class="mb-3 text-success">Welcome to <span class="text-success fw-bold">Institute</span></h5>
+        <button type="button" class="btn-close position-absolute top-0 end-0 m-3" data-bs-dismiss="modal" aria-label="Close"></button>
+        <form id="loginForm" novalidate>
+          <div class="mb-3">
+            <label for="email" class="form-label">Email address</label>
+            <input type="email" class="form-control" id="email" required>
+            <div class="invalid-feedback">Please enter a valid email.</div>
+          </div>
+          <div class="mb-3">
+            <label for="password" class="form-label">Password</label>
+            <input type="password" class="form-control" id="password" required>
+            <div class="invalid-feedback">Please enter your password.</div>
+          </div>
+          <div class="form-check mb-3">
+            <input class="form-check-input" type="checkbox" id="remember">
+            <label class="form-check-label" for="remember">Remember me</label>
+          </div>
+          <button type="submit" class="btn btn-success w-100">Login</button>
+          <p class="text-center mt-3">
+            Don't have an account? 
+            <a href="#" data-bs-toggle="modal" data-bs-target="#registerModal" data-bs-dismiss="modal">Register Now..!</a>
+          </p>
+        </form>
+      </div>
+      
+    </div>
+  </div>
+</div>
+<!-- Register Modal -->
+<div class="modal fade" id="registerModal" tabindex="-1" aria-labelledby="registerModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content p-4">
+      <h5 class="mb-3 text-success">Register with <span class="text-success fw-bold">Institute</span></h5>
+      <button type="button" class="btn-close position-absolute top-0 end-0 m-3" data-bs-dismiss="modal" aria-label="Close"></button>
+      <form id="registerForm" novalidate>
+        <div class="mb-3">
+          <label for="regName" class="form-label">Full Name</label>
+          <input type="text" class="form-control" id="regName" required>
+          <div class="invalid-feedback">Enter your name.</div>
+        </div>
+        <div class="mb-3">
+          <label for="regEmail" class="form-label">Email</label>
+          <input type="email" class="form-control" id="regEmail" required>
+          <div class="invalid-feedback">Enter a valid email.</div>
+        </div>
+        <div class="mb-3">
+          <label for="regPassword" class="form-label">Password</label>
+          <input type="password" class="form-control" id="regPassword" required>
+          <div class="invalid-feedback">Enter a password.</div>
+        </div>
+        <button type="submit" class="btn btn-success w-100">Register</button>
+      </form>
+    </div>
+  </div>
+</div>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- Hero Section -->
+  <section class="hero text-center" id="hero">
+    <div class="container">
+      <h1 class="display-4" >Contact Us</h1>
+      <p class="lead"></p>
+    </div>
+  </section>
+
+  <!-- Include Bootstrap 5 CDN (if not already included) -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- Responsive Section -->
+<section class="py-5" style="background-color: #f0f4f8;">
+  <div class="container">
+    <div class="row g-5">
+
+      <!-- Course Benefits List -->
+      <div class="col-lg-6">
+        <!-- (Same left container from previous answer) -->
+        <h3 class="mb-4 text-primary">Why Choose Us?</h3>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item"><i class="bi bi-check-circle-fill text-success"></i> Expert Instructors</li>
+          <li class="list-group-item"><i class="bi bi-check-circle-fill text-success"></i> Comprehensive Curriculum</li>
+          <li class="list-group-item"><i class="bi bi-check-circle-fill text-success"></i> Flexible Learning</li>
+          <li class="list-group-item"><i class="bi bi-check-circle-fill text-success"></i> Career Support</li>
+          <li class="list-group-item"><i class="bi bi-check-circle-fill text-success"></i> Expert Faculty</li>
+          <li class="list-group-item"><i class="bi bi-check-circle-fill text-success"></i> Study Material</li>
+          <li class="list-group-item"><i class="bi bi-check-circle-fill text-success"></i> Mock Tests with Purpose</li>
+          <li class="list-group-item"><i class="bi bi-check-circle-fill text-success"></i> Doubt Clearing</li>
+          <li class="list-group-item"><i class="bi bi-check-circle-fill text-success"></i> Proven Track Record of Success</li>
+          <li class="list-group-item"><i class="bi bi-check-circle-fill text-success"></i> Stress-Free Learning</li>
+          <li class="list-group-item"><i class="bi bi-check-circle-fill text-success"></i> 24/7 Access to Learning Sources</li>
+          <li class="list-group-item"><i class="bi bi-check-circle-fill text-success"></i> Exam Strategy and Time Management</li>
+        </ul>
+      </div>
+
+      <!-- Contact Form -->
+      <div class="col-lg-6">
+        <h3 class="mb-4 text-primary">Get in Touch</h3>
+        <form>
+          <div class="mb-3">
+            <label class="form-label">Full Name</label>
+            <input type="text" class="form-control" required>
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label">Phone</label>
+            <input type="tel" class="form-control" required>
+          </div>
+
+          <!-- Course & Exam Section -->
+<div class="mb-3">
+  <label class="form-label">Select Course</label>
+  <select class="form-select" id="courseSelect" required>
+    <option selected disabled>Select Course</option>
+    <option value="mba">MBA Entrance</option>
+    <option value="law">Law Entrance</option>
+    <option value="govt">MCA Entrance</option>
+    <option value="govt">TISS Entrance</option>
+    <option value="govt">BBA Entrance</option>
+    <option value="govt">Hotel Management</option>
+    <option value="govt">B.Ed Entrance</option>
+  </select>
+</div>
+
+<!-- Selected Course Badge with Remove Option -->
+<div id="selectedCourseContainer" class="mb-3" style="display: none;">
+  <span id="selectedCourseBadge" class="badge bg-primary fs-6 p-2">
+    <span id="selectedCourseText">Course Name</span>
+    <button type="button" class="btn btn-sm btn-close ms-2" id="removeCourseBtn" aria-label="Remove"></button>
+  </span>
+</div>
+
+<!-- Exam Dropdown -->
+<div class="mb-3">
+  <label class="form-label">Select Exam</label>
+  <select class="form-select" id="examSelect" required>
+    <option selected disabled>Select Exam</option>
+  </select>
+</div>
+
+
+          <div class="mb-3">
+            <label class="form-label">Select State</label>
+            <select class="form-select" required>
+              <option selected disabled>Select State</option>
+              <option>Maharashtra</option>
+              <option>Gujarat</option>
+            </select>
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label">Select City</label>
+            <select class="form-select" required>
+              <option selected disabled>Select City</option>
+              <option>Mumbai</option>
+              <option>Pune</option>
+            </select>
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label">Message</label>
+            <textarea class="form-control" rows="3"></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-primary w-100">Submit</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Bootstrap & Icons CDN -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+<script>
+  const courseToExams = {
+    mba: ['CAT', 'CMAT', 'XAT', 'SNAP', 'MAT','MBACET','CUTE PG',],
+    law: ['CLAT', 'AILET', 'SLAT', 'MH CET Law'],
+    govt: ['Bank PO', 'SSC CGL', 'RRB NTPC', 'UPSC']
+  };
+
+  const courseSelect = document.getElementById('courseSelect');
+  const examSelect = document.getElementById('examSelect');
+  const selectedCourseContainer = document.getElementById('selectedCourseContainer');
+  const selectedCourseText = document.getElementById('selectedCourseText');
+  const removeCourseBtn = document.getElementById('removeCourseBtn');
+
+  courseSelect.addEventListener('change', () => {
+    const selectedValue = courseSelect.value;
+    const selectedText = courseSelect.options[courseSelect.selectedIndex].text;
+
+    // Show selected course badge
+    selectedCourseText.textContent = selectedText;
+    selectedCourseContainer.style.display = 'block';
+
+    // Hide course dropdown
+    courseSelect.style.display = 'none';
+
+    // Populate exams
+    const exams = courseToExams[selectedValue] || [];
+    examSelect.innerHTML = '<option selected disabled>Select Exam</option>';
+    exams.forEach(exam => {
+      const option = document.createElement('option');
+      option.value = exam.toLowerCase();
+      option.textContent = exam;
+      examSelect.appendChild(option);
+    });
+  });
+
+  removeCourseBtn.addEventListener('click', () => {
+    // Reset course dropdown
+    courseSelect.selectedIndex = 0;
+    courseSelect.style.display = 'block';
+    selectedCourseContainer.style.display = 'none';
+
+    // Clear exam dropdown
+    examSelect.innerHTML = '<option selected disabled>Select Exam</option>';
+  });
+</script>
+
+
+<!-- Add Bootstrap Icons CDN -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+
+<!-- Floating Buttons -->
+<div class="whatsapp-icon">
+    <i class="bi bi-whatsapp"></i>
+</div>
+<div class="call-icon">
+    <i class="bi bi-telephone-fill"></i>
+</div>
+<!-- Footer -->
+<footer class="footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4 mb-3">
+        <img src="logo.png" alt="Logo" height="40">
+        <p class="mt-3">Empowering learners through innovative e-learning solutions.</p>
+      </div>
+      <div class="col-md-4 mb-3">
+        <h5>Quick Links</h5>
+        <ul class="list-unstyled">
+          <li><a href="#">Home</a></li>
+          <li><a href="">Career</a></li>
+          <li><a href="">Result</a></li>
+          <li><a href="">Event</a></li>
+          <li><a href="">Contact US</a></li>
+        </ul>
+      </div>
+      <div class="col-md-4 mb-3">
+        <h5>Resources</h5>
+        <ul class="list-unstyled">
+          <li><a href="#">Gallery</a></li>
+          <li><a href="">Blog</a></li>
+          <li><a href="">Support</a></li>
+          <li><a href="">Course Enquiry</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</footer>
+<!-- Bootstrap JS & Icons -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+
+</body>
+</html>
