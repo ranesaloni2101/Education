@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Support</title>
+    <title>Hotel-Management </title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Bootstrap CSS -->
@@ -192,92 +192,7 @@
       display: inline-block;
       padding-bottom: 5px;
     }
-    .feedback-form {
-      background: #fff;
-      padding: 25px;
-      width: 90%;
-      margin: auto;
-      border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    }
-    .feedback-form h2 {
-      text-align: center;
-      color: #333;
-    }
-    .rating {
-  direction: rtl; /* Left to right */
-  unicode-bidi: bidi-override;
-  display: inline-flex;
-  flex-direction: row;
-}
-
-.rating input {
-  display: none;
-}
-
-.rating label {
-  font-size: 2rem;
-  color: #ccc;
-  cursor: pointer;
-}
-
-.rating input:checked ~ label {
-  color: #ccc;
-}
-
-.rating input:checked + label,
-.rating input:checked + label ~ label {
-  color: gold;
-}
-    .message-box {
-      width: 100%;
-      padding: 10px;
-      height: 100px;
-      border-radius: 5px;
-      border: 1px solid #ccc;
-      resize: none;
-    }
-    .submit-btn {
-      display: block;
-      width: 100%;
-      padding: 12px;
-      background: #28a745;
-      border: none;
-      color: #fff;
-      font-size: 16px;
-      border-radius: 5px;
-      cursor: pointer;
-      margin-top: 15px;
-    }
-    .submit-btn:hover {
-      background: #218838;
-    }
-    .containers {
-      display: flex;
-      gap: 20px;
-      flex-wrap: wrap;
-      margin-top: 20px;
-    }
-
-    .issue-container {
-      flex: 1 1 45%;
-      background: #fafafa;
-      padding: 20px;
-      border: 1px solid #ddd;
-      border-radius: 8px;
-    }
-
-    .issue-container h3 {
-      margin-bottom: 15px;
-      color: #444;
-    }
-
-    .issue-container label {
-      display: block;
-      margin-bottom: 8px;
-      font-size: 15px;
-    }
-  </style>
+    </style>
 </head>
 <body>
 <!-- Top Bar -->
@@ -426,52 +341,85 @@
     </div>
   </div>
 </nav>
+<section class="custom-container">
+  <div class="container">
+    <div class="row g-5 align-items-start">
 
-<div class="feedback-form">
-  <h2>We value your feedback!</h2>
-  <p>The Summer Internship Programme is designed to enhance students’ intellectual growth and practical understanding by offering firsthand exposure to real-world organizational and societal environments. Conducted after the first year of study, this internship serves as a vital bridge between academic learning and industry practices. Through direct corporate and industrial engagement, students gain invaluable insights into workplace dynamics, decision-making processes, and operational challenges. This experience not only helps them apply management theories in practical settings but also develops their problem-solving abilities, professional skills, and confidence—preparing them for future leadership roles in the business world.</p><br>
-<p><strong>Rate Us:</strong></p>
-  <div class="rating">
-  <input type="radio" name="rating" id="star1" value="1">
-  <label for="star1">★</label>
+      <!-- Left Side: Sub-Courses (Transparent) -->
+      <div class="col-lg-6 text-blue">
+        <h3 class="mb-4">Hotel-Management Sub-Courses</h3>
+        <div class="sub-course-list">
+          <div class="sub-course-item"><a href="hotel_management.html">All Hotel-Management Exams</a></div>  
+          <div class="sub-course-item">NCHMCT JEE (National Council for Hotel Management and Catering Technology Joint Entrance Examination)</div>
+          <div class="sub-course-item">ECHAT (Electronic Common Hotel & Hospitality Admission Test)</div>
+          <div class="sub-course-item">IHM A (Institute of Hotel Management)</div>
+          <div class="sub-course-item">MAH BHMCT CET (Maharashtra Bachelor of Hotel Management and Catering Technology Common Entrance Test)</div>
+        </div>
+      </div>
 
-  <input type="radio" name="rating" id="star2" value="2">
-  <label for="star2">★</label>
+      <!-- Right Side: Enquiry Form -->
+      <div class="col-lg-6">
+        <div class="form-box">
+          <h3 class="mb-4 text-primary">Enquiry Form</h3>
+          <form>
+            <div class="mb-3">
+              <label class="form-label">Full Name</label>
+              <input type="text" class="form-control" placeholder="Enter your name" required>
+            </div>
 
-  <input type="radio" name="rating" id="star3" value="3">
-  <label for="star3">★</label>
+            <div class="mb-3">
+              <label class="form-label">Phone</label>
+              <input type="tel" class="form-control" placeholder="Enter phone number" required>
+            </div>
 
-  <input type="radio" name="rating" id="star4" value="4">
-  <label for="star4">★</label>
+            <div class="mb-3">
+              <label class="form-label">Course</label>
+              <select class="form-select" required>
+                <option selected disabled>Choose Course</option>
+                <option>All Hotel-Management Exams</option>
+                <option>NCHMCT JEE</option>
+                <option>ECHAT</option>
+                <option>IHM A</option>
+                <option>MAH BHMCT CET</option>
+              </select>
+            </div>
 
-  <input type="radio" name="rating" id="star5" value="5">
-  <label for="star5">★</label>
-</div>
+            <div class="mb-3">
+              <label class="form-label">Message</label>
+              <textarea class="form-control" rows="3" placeholder="Write your message"></textarea>
+            </div>
 
-  <textarea class="message-box" placeholder="Write your message here..."></textarea>
+            <button type="submit" class="btn btn-primary w-100">Submit</button>
+          </form>
+        </div>
+      </div>
 
-  <button class="submit-btn">Submit Feedback</button>
-</div>
-<div class="containers">
-    <!-- Container 1 -->
-    <div class="issue-container">
-      <h3>General Issues (Part 1)</h3>
-      <label><input type="checkbox" name="issue1"> Slow loading time</label>
-      <label><input type="checkbox" name="issue2"> Difficult navigation</label>
-      <label><input type="checkbox" name="issue3"> Broken links</label>
-      <label><input type="checkbox" name="issue4"> Poor mobile experience</label>
-    </div>
-
-    <!-- Container 2 -->
-    <div class="issue-container">
-      <h3>General Issues (Part 2)</h3>
-      <label><input type="checkbox" name="issue5"> Unclear content</label>
-      <label><input type="checkbox" name="issue6"> Missing features</label>
-      <label><input type="checkbox" name="issue7"> Bugs or glitches</label>
-      <label><input type="checkbox" name="issue8"> Other issues</label>
     </div>
   </div>
-  <!-- Footer -->
+</section>
+
+<section class="py-5">
+  <div class="container">
+    <h2 class="text-center mb-4 fw-bold text-dark">Choose Your Session</h2>
+    <div class="d-flex justify-content-center gap-3 flex-wrap mb-5">
+      <button class="btn btn-outline-brand session-btn" onclick="showCourses('live')">Live Classes</button>
+      <button class="btn btn-outline-brand session-btn" onclick="showCourses('self')">Self Study</button>
+      <button class="btn btn-outline-brand session-btn" onclick="showCourses('sectional')">Sectional</button>
+      <button class="btn btn-outline-brand session-btn" onclick="showCourses('mock')">Mock Test</button>
+      <button class="btn btn-outline-brand session-btn" onclick="showCourses('books')">Books & eBooks</button>
+    </div>
+
+    <div id="course-container" class="row g-4"></div>
+  </div>
+</section>
+<!-- Floating Buttons -->
+<div class="whatsapp-icon">
+    <i class="bi bi-whatsapp"></i>
+</div>
+<div class="call-icon">
+    <i class="bi bi-telephone-fill"></i>
+</div>
+<!-- Footer -->
 <footer class="footer">
   <div class="container">
     <div class="row">
@@ -483,6 +431,7 @@
         <h5>Quick Links</h5>
         <ul class="list-unstyled">
           <li><a href="index.html">Home</a></li>
+          <li><a href="">Career</a></li>
           <li><a href="result.html">Result</a></li>
           <li><a href="">Event</a></li>
           <li><a href="contact.html">Contact US</a></li>
@@ -503,5 +452,195 @@
 <!-- Bootstrap JS & Icons -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+<script>
+  const courseData = {
+    live: [
+      {
+        img: "programming-background-with-person-working-with-codes-computer_23-2150010127.jpg",
+        title: "HOTEL MGT LIVE BATCH",
+        validity: "6 Months Access",
+        includes: ["657+ Lecture","350+ Live Lectures", "11+ Full length", "598+ Topic Wise", "108+ E-books", "19+ Books"],
+        price: 19999,
+        discount: 45999,
+        buyLink: "#",
+        cartLink: "#",
+        detailLink: "#"
+      },
+      {
+        img: "programming-background-with-person-working-with-codes-computer_23-2150010127.jpg",
+        title: "HOTEL MGT LIVE BATCH 2027",
+        validity: "4 Months Access",
+        includes: ["657+ Lecture","400+ Live Lectures", "34+ Full length", "598+ Topic Wise", "108+ E-books", "19+ Books"],
+        price: 24999,
+        discount: 49999,
+        buyLink: "#",
+        cartLink: "#",
+        detailLink: "#"
+      }
+    ],
+    self: [
+      {
+        img: "https://via.placeholder.com/400x200?text=Self+Study",
+        title: "HOTEL MGT Self Study Course",
+        validity: "12 Months Access",
+        includes: ["541+ Lecture", "35+ Full length", "624+ Topic Wise", "109+ E-books"],
+        price: 11699,
+        discount: 27999,
+        buyLink: "#",
+        cartLink: "#",
+        detailLink: "#"
+      }
+    ],
+    sectional: [
+      {
+        img: "https://via.placeholder.com/400x200?text=Self+Study",
+        title: "LOGICAL REASONING",
+        validity: "12 Months Access",
+        includes: ["114+ Lectures", "47+ Topic Wise", "22+ E-Books"],
+        price: 4199,
+        discount: 10999,
+        buyLink: "#",
+        cartLink: "#",
+        detailLink: "#"
+      },
+      {
+        img: "https://via.placeholder.com/400x200?text=Self+Study",
+        title: "ALL HOTEL MGT(ENGLISH)",
+        validity: "12 Months Access",
+        includes: ["132+ Lectures", "121+ Topic Wise", "31+ E-Books"],
+        price: 4199,
+        discount: 10999,
+        buyLink: "#",
+        cartLink: "#",
+        detailLink: "#"
+      },
+      {
+        img: "https://via.placeholder.com/400x200?text=Self+Study",
+        title: "QUANTITATIVE APTITUDE",
+        validity: "12 Months Access",
+        includes: ["170+ Lectures", "280+ Topic Wise", "19+ E-Books"],
+        price: 4299,
+        discount: 10999,
+        buyLink: "#",
+        cartLink: "#",
+        detailLink: "#"
+      },
+      {
+        img: "https://via.placeholder.com/400x200?text=Self+Study",
+        title: "Current Affairs & GK",
+        validity: "12 Months Access",
+        includes: ["123+ Lectures", "156+ Topic Wise", "37+ E-Books"],
+        price: 4399,
+        discount: 10000,
+        buyLink: "#",
+        cartLink: "#",
+        detailLink: "#"
+      }
+    ],
+    mock: [
+        {
+        img: "https://via.placeholder.com/400x200?text=Self+Study",
+        title: "HOTEL MGT TOPIC WISE",
+        validity: "12 Months Access",
+        includes: ["576+ Topic Wise"],
+        price: 1099,
+        discount: 2000,
+        buyLink: "#",
+        cartLink: "#",
+        detailLink: "#"
+      }
+    ],
+    books: [
+      {
+        img: "https://via.placeholder.com/400x200?text=Self+Study",
+        title: "HOTEL MGT E-Book",
+        validity: "12 Months Access",
+        includes: ["112+ E-Books"],
+        price: 799,
+        discount: 1299,
+        buyLink: "#",
+        cartLink: "#",
+        detailLink: "#"
+      },
+      {
+        img: "https://via.placeholder.com/400x200?text=Self+Study",
+        title: "HOTEL MGT Book",
+        validity: "12 Months Access",
+        includes: ["18+ Book"],
+        price: 1399,
+        discount: 2899,
+        buyLink: "#",
+        cartLink: "#",
+        detailLink: "#"
+      }
+    ]
+  };
+
+  // Show Live Courses by default on page load
+window.onload = function() {
+  showCourses('live');
+};
+
+  function showCourses(type) {
+    const container = document.getElementById('course-container');
+    container.innerHTML = '';
+
+    if (!courseData[type].length) {
+      container.innerHTML = '<p class="text-center text-muted">No courses available for this session yet.</p>';
+      return;
+    }
+
+    courseData[type].forEach(course => {
+      const features = course.includes.map(f => `<li><i class="fa-solid fa-check features-icon"></i>${f}</li>`).join("");
+      container.innerHTML += `
+        <div class="col-md-6 col-lg-4">
+          <div class="card h-100 shadow-sm">
+            <img src="${course.img}" class="card-img-top" alt="${course.title}">
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title"><i class="fa-solid fa-graduation-cap me-2"></i>${course.title}</h5>
+              <p><i class="fa-regular fa-clock me-2"></i><strong>Validity:</strong> ${course.validity}</p>
+              <ul>${features}</ul>
+              <div class="price-section mb-3">
+                <strong>₹${course.price}</strong> <del>₹${course.discount}</del>
+              </div>
+              <div class="d-flex flex-column gap-2 mt-auto action-buttons">
+                <a href="${course.detailLink}" class="btn btn-outline-secondary w-100"><i class="fa-solid fa-eye me-1"></i>View Details</a>
+                <a href="${course.buyLink}" class="btn btn-brand w-100"><i class="fa-solid fa-bolt me-1"></i>Buy Now</a>
+                <a href="${course.cartLink}" class="btn btn-outline-brand w-100"><i class="fa-solid fa-cart-plus me-1"></i>Add to Cart</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      `;
+    });
+  }
+</script>
+
+<script>
+    function scrollLeft() {
+        document.getElementById('carousel').scrollBy({ left: -300, behavior: 'smooth' });
+    }
+
+    function scrollRight() {
+        document.getElementById('carousel').scrollBy({ left: 300, behavior: 'smooth' });
+    }
+</script>
+<!-- SCROLL SCRIPT FOR RESULT CAROUSEL -->
+<script>
+    function scrollLeftResult() {
+        document.getElementById('resultCarousel').scrollBy({ left: -300, behavior: 'smooth' });
+    }
+
+    function scrollRightResult() {
+        document.getElementById('resultCarousel').scrollBy({ left: 300, behavior: 'smooth' });
+    }
+    function scrollLeft() {
+      document.getElementById('cardSlider').scrollBy({ left: -320, behavior: 'smooth' });
+    }
+
+    function scrollRight() {
+      document.getElementById('cardSlider').scrollBy({ left: 320, behavior: 'smooth' });
+    }
+</script>
 </body>
 </html>
