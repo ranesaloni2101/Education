@@ -132,9 +132,13 @@
   }
 
   .sub-course-list {
+    display: none;
     margin: 10px 0 30px;
   }
 
+  #mba{
+    display: block;
+  }
   .exam-card {
     padding: 10px;
     margin: 6px 0;
@@ -314,11 +318,11 @@
   </button>
   <ul class="dropdown-menu">
     <li><a class="dropdown-item" href="mbaentrance.html">MBA Entrance</a></li>
-    <li><a class="dropdown-item" href="#lawentrance.html">LAW Entrance</a></li>
+    <li><a class="dropdown-item" href="lawentrance.html">LAW Entrance</a></li>
     <li><a class="dropdown-item" href="mcaentrance.html">MCA Entrance</a></li>
-    <li><a class="dropdown-item" href="#">TISS Entrance</a></li>
-    <li><a class="dropdown-item" href="#">BBA Entrance</a></li>
-    <li><a class="dropdown-item" href="#">Hotel Management</a></li>
+    <li><a class="dropdown-item" href="tissentarance.html">TISS Entrance</a></li>
+    <li><a class="dropdown-item" href="bbaentrance.html">BBA Entrance</a></li>
+    <li><a class="dropdown-item" href="hotel_management.html">Hotel Management</a></li>
   </ul>
 </div>
 
@@ -499,13 +503,13 @@
   <div class="course-selector">
   <h4>Select Course</h4>
   <div>
-    <span class="course-btn" data-target="mba">MBA Entrance</span>
-    <span class="course-btn" data-target="law">LAW Entrance</span>
-    <span class="course-btn" data-target="mca">MCA Entrance</span>
-    <span class="course-btn" data-target="tiss">TISS Entrance</span>
-    <span class="course-btn" data-target="bba">BBA Entrance</span>
-    <span class="course-btn" data-target="hotel">Hotel Management</span>
-    <span class="course-btn" data-target="bed">B.Ed Entrance</span>
+    <span class="course-btn" data-target="mba"><a href="mbaentrance.html" style="color: #000;text-decoration: none;">MBA Entrance</a></span>
+    <span class="course-btn" data-target="law"><a href="lawentrance.html" style="color: #000;text-decoration: none;">LAW Entrance</a></span>
+    <span class="course-btn" data-target="mca"><a href="mcaentrance.html" style="color: #000;text-decoration: none;">MCA Entrance</a></span>
+    <span class="course-btn" data-target="tiss"><a href="tissentarance.html" style="color: #000;text-decoration: none;">TISS Entrance</a></span>
+    <span class="course-btn" data-target="bba"><a href="bbaentrance.html" style="color: #000;text-decoration: none;">BBA Entrance</a></span>
+    <span class="course-btn" data-target="hotel"><a href="hotel_management.html" style="color: #000;text-decoration: none;">Hotel Management</a></span>
+    <span class="course-btn" data-target="bed"><a href="" style="color: #000;text-decoration: none;">B.Ed Entrance</a></span>
   </div>
 </div>
 
@@ -576,11 +580,11 @@
   <div id="law" class="sub-course-list">
     <div class="row g-3">
       <!-- Example Exam Cards (Add more as needed) -->
-      <div class="col-md-4">
+      <div class="col-md-4"><a href="lawentrance.html">
         <div class="exam-card d-flex align-items-center p-3 border rounded">
           <img src="https://img.icons8.com/color/48/graduation-cap.png" alt="All MBA" class="me-3">
           <span>All LAW Exams</span>
-        </div>
+        </div></a>
       </div>
       <div class="col-md-4">
         <div class="exam-card d-flex align-items-center p-3 border rounded">
@@ -636,11 +640,11 @@
   <div id="mca" class="sub-course-list" style="display:none;">
     <div class="row g-3">
       <!-- Example Exam Cards (Add more as needed) -->
-      <div class="col-md-4">
+      <div class="col-md-4"><a href="mcaentrance.html">
         <div class="exam-card d-flex align-items-center p-3 border rounded">
           <img src="https://img.icons8.com/color/48/graduation-cap.png" alt="All MBA" class="me-3">
           <span>All MCA Exams</span>
-        </div>
+        </div></a>
       </div>
       <div class="col-md-4">
         <div class="exam-card d-flex align-items-center p-3 border rounded">
@@ -672,11 +676,11 @@
   <div id="tiss" class="sub-course-list" style="display:none;">
     <div class="row g-3">
       <!-- Example Exam Cards (Add more as needed) -->
-      <div class="col-md-4">
+      <div class="col-md-4"><a href="tissentarance.html">
         <div class="exam-card d-flex align-items-center p-3 border rounded">
           <img src="https://img.icons8.com/color/48/graduation-cap.png" alt="All MBA" class="me-3">
           <span>All TISS Exams</span>
-        </div>
+        </div></a>
       </div>
       <div class="col-md-4">
         <div class="exam-card d-flex align-items-center p-3 border rounded">
@@ -702,11 +706,11 @@
   <div id="bba" class="sub-course-list" style="display:none;">
     <div class="row g-3">
       <!-- Example Exam Cards (Add more as needed) -->
-      <div class="col-md-4">
+      <div class="col-md-4"><a href="bbaentrance.html">
         <div class="exam-card d-flex align-items-center p-3 border rounded">
           <img src="https://img.icons8.com/color/48/graduation-cap.png" alt="All MBA" class="me-3">
           <span>All BBA Exams</span>
-        </div>
+        </div></a>
       </div>
       <div class="col-md-4">
         <div class="exam-card d-flex align-items-center p-3 border rounded">
@@ -762,11 +766,11 @@
   <div id="hotel" class="sub-course-list" style="display:none;">
     <div class="row g-3">
       <!-- Example Exam Cards (Add more as needed) -->
-      <div class="col-md-4">
+      <div class="col-md-4"><a href="hotel_management.html">
         <div class="exam-card d-flex align-items-center p-3 border rounded">
           <img src="https://img.icons8.com/color/48/graduation-cap.png" alt="All MBA" class="me-3">
           <span>All Hotel-Management Exams</span>
-        </div>
+        </div></a>
       </div>
       <div class="col-md-4">
         <div class="exam-card d-flex align-items-center p-3 border rounded">
@@ -821,7 +825,7 @@
     <img src="appstore.png" class="me-2" height="40">
     <img src="googleplay.png" height="40">
   </div>
-  <img src="phone1.png" class="position-absolute" style="right: 150px; bottom: 0; height: 300px;">
+  <img src="mobile.png" class="position-absolute" style="right: 150px; bottom: 0; height: 300px;">
   <img src="phone2.png" class="position-absolute" style="right: 20px; bottom: 0; height: 300px;">
 </section>
 
@@ -910,7 +914,7 @@
   <div class="counselling-content text-white">
     <h2><strong>100+ Counselling on Daily Basis</strong></h2>
     <p class="highlighted">Our Team is right there you to guide about exam preparation and courses information</p><br>
-    <a href="#contact" class="btn btn-warning text-white fw-bold px-4 py-2 mt-2">FREE COUNSELLING</a>
+    <a href="contact.html" class="btn btn-warning text-white fw-bold px-4 py-2 mt-2">FREE COUNSELLING</a>
   </div>
 </section>
 
@@ -1084,11 +1088,11 @@
       <div class="col-md-4 mb-3">
         <h5>Quick Links</h5>
         <ul class="list-unstyled">
-          <li><a href="#">Home</a></li>
+          <li><a href="index.html">Home</a></li>
           <li><a href="">Career</a></li>
-          <li><a href="">Result</a></li>
+          <li><a href="result.html">Result</a></li>
           <li><a href="">Event</a></li>
-          <li><a href="">Contact US</a></li>
+          <li><a href="contact.html">Contact US</a></li>
         </ul>
       </div>
       <div class="col-md-4 mb-3">
@@ -1096,8 +1100,8 @@
         <ul class="list-unstyled">
           <li><a href="#">Gallery</a></li>
           <li><a href="">Blog</a></li>
-          <li><a href="">Support</a></li>
-          <li><a href="">Course Enquiry</a></li>
+          <li><a href="support.html">Support</a></li>
+          <li><a href="course_enquiry.html">Course Enquiry</a></li>
         </ul>
       </div>
     </div>
@@ -1132,8 +1136,6 @@
       }
     });
   });
-
-
 
   const swiper = new Swiper('.wallSwiper', {
     slidesPerView: 3,
