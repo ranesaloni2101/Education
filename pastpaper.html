@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Past Papers</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<!-- Bootstrap CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+<!-- Bootstrap JS Bundle (includes Popper) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"/>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+  <!-- Owl Carousel CSS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" />
+<style>
+    body {
+        font-family: 'Segoe UI', sans-serif;
+        background-color: #f9f9f9;
+    }
+    body { font-family: Arial, sans-serif; }
+    .top-bar {
+      background: green;
+      color: white;
+      padding: 5px 20px;
+      font-size: 14px;
+    }
+    .top-bar span {
+      margin-right: 20px;
+    }
+    .navbar {
+      padding: 10px 20px;
+      color: white;
+    }
+    .navbar .nav-link {
+    color: white !important;
+  }
+    .btn-login {
+      background-color: #c9e265;
+      color: black;
+      padding: 8px 16px;
+      border: none;
+    }
+    /* Hover dropdown support */
+.hover-dropdown:hover .dropdown-menu {
+  display: block;
+  margin-top: 0;
+}
+
+.hover-dropdown .dropdown-toggle::after {
+  transition: transform 0.2s;
+}
+.hover-dropdown:hover .dropdown-toggle::after {
+  transform: rotate(180deg);
+}
+    .hero {
+        background: linear-gradient(rgba(0,51,102,0.7), rgba(0,51,102,0.7)), url('https://images.unsplash.com/photo-1524995997946-a1c2e315a42f') center/cover;
+        color: white;
+        padding: 50px 20px;
+        text-align: center;
+    }
+    .btn-maincourse {
+        margin: 5px;
+        border-radius: 25px;
+        padding: 8px 20px;
+        background-color: #003366;
+        color: white;
+    }
+    .btn-maincourse:hover {
+        background-color: #002244;
+        color: white;
+    }
+    .btn-subcourse {
+        margin: 5px;
+        background-color: #0055a5;
+        color: white;
+        border-radius: 20px;
+    }
+    .btn-subcourse:hover {
+        background-color: #003366;
+        color: white;
+    }
+    .card {
+        border: none;
+        border-radius: 10px;
+        box-shadow: 0px 4px 8px rgba(0,0,0,0.1);
+        transition: transform 0.3s;
+    }
+    .card:hover {
+        transform: translateY(-5px);
+    }
+    .card img {
+        border-radius: 10px 10px 0 0;
+        height: 180px;
+        object-fit: cover;
+    }
+    .btn-brand {
+        background-color: #003366;
+        color: white;
+        border-radius: 25px;
+        padding: 6px 15px;
+    }
+    .btn-brand:hover {
+        background-color: #002244;
+        color: white;
+    }
+    .newsletter-box {
+      background-color: #8dc63f;
+      color: white;
+      padding: 30px 20px;
+      text-align: center;
+    }
+    .newsletter-box input {
+      max-width: 300px;
+      margin: 0 10px;
+    }
+    .footer {
+      background-color: #003366;
+      color: white;
+      padding: 40px 0;
+    }
+    .footer a {
+      color: white;
+      text-decoration: none;
+    }
+    .footer h5 {
+      border-bottom: 2px solid #8dc63f;
+      display: inline-block;
+      padding-bottom: 5px;
+    }
+</style>
+</head>
+<body>
+<!-- Top Bar -->
+  <div class="top-bar d-flex justify-content-between">
+    <div>
+      <span>Enquiry: +91 8828581455</span>
+      <span>Support: +91 8857945882</span>
+      <span>| 10:00 AM - 07:00 PM</span>
+    </div>
+  </div>
+
+  <!-- Navbar -->
+<nav class="navbar navbar-expand-lg px-3" style="background-color: #003366;">
+  <div class="container-fluid">
+    <!-- Logo -->
+    <a class="navbar-brand" href="#">
+      <img src="https://website.com/assets/images/logo.png" alt="Logo" height="40">
+    </a>
+
+    <!-- Toggler for mobile -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Navbar content -->
+    <div class="collapse navbar-collapse" id="mainNavbar">
+      <!-- Buy Course Dropdown -->
+      <div class="dropdown me-3 hover-dropdown">
+  <button class="btn btn-warning dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+    BUY COURSE
+  </button>
+  <ul class="dropdown-menu">
+    <li><a class="dropdown-item" href="mbaentrance.html">MBA Entrance</a></li>
+    <li><a class="dropdown-item" href="lawentrance.html">LAW Entrance</a></li>
+    <li><a class="dropdown-item" href="mcaentrance.html">MCA Entrance</a></li>
+    <li><a class="dropdown-item" href="tissentarance.html">TISS Entrance</a></li>
+    <li><a class="dropdown-item" href="bbaentrance.html">BBA Entrance</a></li>
+    <li><a class="dropdown-item" href="hotel_management.html">Hotel Management</a></li>
+  </ul>
+</div>
+
+
+      <!-- Main nav links -->
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0 ">
+        <li class="nav-item text-white" ><a class="nav-link" href="index.html">HOME</a></li>
+        <li class="nav-item text-white"><a class="nav-link" href="result.html">RESULT</a></li>
+                <li class="nav-item dropdown hover-dropdown">
+  <a class="nav-link dropdown-toggle" href="#" id="connectUsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    CONNECT US
+  </a>
+  <ul class="dropdown-menu" aria-labelledby="connectUsDropdown">
+    <li><a class="dropdown-item" href="contact.html">Contact Us</a></li>
+    <li><a class="dropdown-item" href="course_enquiry.html">Courses Enquiry</a></li>
+    <li><a class="dropdown-item" href="support.html">Support / Help</a></li>
+    <li><a class="dropdown-item" href="#b2b">B2B Associate</a></li>
+  </ul>
+</li>
+        <li class="nav-item text-white"><a class="nav-link" href="#">DEMO LECTURES</a></li>
+        <li class="nav-item dropdown hover-dropdown">
+  <a class="nav-link dropdown-toggle" href="#" id="otherDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    OTHER
+  </a>
+  <ul class="dropdown-menu" aria-labelledby="otherDropdown">
+    <li><a class="dropdown-item" href="#blog">Blog</a></li>
+    <li><a class="dropdown-item" href="#career">Career</a></li>
+    <li><a class="dropdown-item" href="#gallery">Gallery</a></li>
+  </ul>
+</li>
+      </ul>
+
+      <!-- Cart and Login -->
+      <div class="d-flex align-items-center">
+        <!-- Cart Icon -->
+        <div class="position-relative me-3">
+          <img src="https://img.icons8.com/ios-filled/24/ffffff/shopping-cart.png" alt="Cart" />
+          <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+            0
+          </span>
+        </div>
+
+        <!-- Login Button -->
+        <button class="btn btn-outline-warning bg-warning text-white" data-bs-toggle="modal" data-bs-target="#loginModal">Login / Register</button>
+        <!-- Login Modal -->
+<div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content d-flex flex-md-row">
+      <!-- Login Form -->
+      <div class="modal-body p-4 w-100">
+        <h5 class="mb-3 text-success">Welcome to <span class="text-success fw-bold">Institute</span></h5>
+        <button type="button" class="btn-close position-absolute top-0 end-0 m-3" data-bs-dismiss="modal" aria-label="Close"></button>
+        <form id="loginForm" novalidate>
+          <div class="mb-3">
+            <label for="email" class="form-label">Email address</label>
+            <input type="email" class="form-control" id="email" required>
+            <div class="invalid-feedback">Please enter a valid email.</div>
+          </div>
+          <div class="mb-3">
+            <label for="password" class="form-label">Password</label>
+            <input type="password" class="form-control" id="password" required>
+            <div class="invalid-feedback">Please enter your password.</div>
+          </div>
+          <div class="form-check mb-3">
+            <input class="form-check-input" type="checkbox" id="remember">
+            <label class="form-check-label" for="remember">Remember me</label>
+          </div>
+          <button type="submit" class="btn btn-success w-100">Login</button>
+          <p class="text-center mt-3">
+            Don't have an account? 
+            <a href="#" data-bs-toggle="modal" data-bs-target="#registerModal" data-bs-dismiss="modal">Register Now..!</a>
+          </p>
+        </form>
+      </div>
+      
+    </div>
+  </div>
+</div>
+<!-- Register Modal -->
+<div class="modal fade" id="registerModal" tabindex="-1" aria-labelledby="registerModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content p-4">
+      <h5 class="mb-3 text-success">Register with <span class="text-success fw-bold">Institute</span></h5>
+      <button type="button" class="btn-close position-absolute top-0 end-0 m-3" data-bs-dismiss="modal" aria-label="Close"></button>
+      <form id="registerForm" novalidate>
+        <div class="mb-3">
+          <label for="regName" class="form-label">Full Name</label>
+          <input type="text" class="form-control" id="regName" required>
+          <div class="invalid-feedback">Enter your name.</div>
+        </div>
+        <div class="mb-3">
+          <label for="regEmail" class="form-label">Email</label>
+          <input type="email" class="form-control" id="regEmail" required>
+          <div class="invalid-feedback">Enter a valid email.</div>
+        </div>
+        <div class="mb-3">
+          <label for="regPassword" class="form-label">Password</label>
+          <input type="password" class="form-control" id="regPassword" required>
+          <div class="invalid-feedback">Enter a password.</div>
+        </div>
+        <button type="submit" class="btn btn-success w-100">Register</button>
+      </form>
+    </div>
+  </div>
+</div>
+
+      </div>
+    </div>
+  </div>
+</nav>
+<!-- Hero Section -->
+<section class="hero">
+    <h1><i class="fas fa-file-alt"></i> Past Papers</h1>
+    <p>Access previous exam papers — sorted by category and year.</p>
+</section>
+
+<div class="container py-4">
+
+    <!-- Main Categories -->
+    <div class="text-center mb-4">
+        <button class="btn btn-maincourse" onclick="showAllMaterials()">All Category</button>
+        <button class="btn btn-maincourse" onclick="showSubCourses('mba')">MBA Entrance</button>
+        <button class="btn btn-maincourse" onclick="showSubCourses('law')">Law Entrance</button>
+        <button class="btn btn-maincourse" onclick="showSubCourses('mca')">MCA Entrance</button>
+        <button class="btn btn-maincourse" onclick="showSubCourses('tiss')">TISS Entrance</button>
+        <button class="btn btn-maincourse" onclick="showSubCourses('bba')">BBA Entrance</button>
+        <button class="btn btn-maincourse" onclick="showSubCourses('hotel')">Hotel Management</button>
+    </div>
+
+    <!-- Sub-Courses -->
+    <div id="subcourses" class="text-center mb-4" style="display:none;"></div>
+
+    <!-- Materials Grid -->
+    <div class="row g-4" id="material-container"></div>
+
+</div>
+<!-- Newsletter Section -->
+<div class="newsletter-box">
+  <div class="container">
+    <h5 class="mb-3">Find out about the latest courses with the websiteEdu newsletter.</h5>
+    <form class="d-flex justify-content-center">
+      <input type="email" class="form-control" placeholder="Enter Email">
+      <button type="submit" class="btn btn-dark ms-2">Submit</button>
+    </form>
+  </div>
+</div>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4 mb-3">
+        <img src="logo.png" alt="Logo" height="40">
+        <p class="mt-3">Empowering learners through innovative e-learning solutions.</p>
+      </div>
+      <div class="col-md-4 mb-3">
+        <h5>Quick Links</h5>
+        <ul class="list-unstyled">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="">Career</a></li>
+          <li><a href="result.html">Result</a></li>
+          <li><a href="">Event</a></li>
+          <li><a href="contact.html">Contact US</a></li>
+        </ul>
+      </div>
+      <div class="col-md-4 mb-3">
+        <h5>Resources</h5>
+        <ul class="list-unstyled">
+          <li><a href="#">Gallery</a></li>
+          <li><a href="">Blog</a></li>
+          <li><a href="support.html">Support</a></li>
+          <li><a href="course_enquiry.html">Course Enquiry</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</footer>
+<script>
+    const allMaterialsHTML = `
+        <div class="col-md-4 material-card mba">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">CAT 2025 Quant Notes</h5>
+                    <p class="card-text">350+ pages covering all quant topics.</p>
+                    <a href="#" class="btn btn-brand"><i class="fas fa-eye"></i> View Details</a>
+                    <a href="#" class="btn btn-success"><i class="fas fa-download"></i> Download</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4 material-card law">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">CLAT Legal Reasoning</h5>
+                    <p class="card-text">Comprehensive notes with practice sets.</p>
+                    <a href="#" class="btn btn-brand"><i class="fas fa-eye"></i> View Details</a>
+                    <a href="#" class="btn btn-success"><i class="fas fa-download"></i> Download</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4 material-card banking">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">IBPS Quantitative Aptitude</h5>
+                    <p class="card-text">Shortcut tricks & solved examples.</p>
+                    <a href="#" class="btn btn-brand"><i class="fas fa-eye"></i> View Details</a>
+                    <a href="#" class="btn btn-success"><i class="fas fa-download"></i> Download</a>
+                </div>
+            </div>
+        </div>
+    `;
+
+    const subCourses = {
+        mba: ["All MBA Exams", "CAT", "XAT", "SNAP", "NMAT", "CUTE PG", "MAT", "MBACET", "CMAT"],
+        law: ["All LAW Exams", "CLAT", "MHCET LAW 5YRS", "SLAT", "CUTE LAW PG", "LSAT", "NLAT", "AILET"],
+        mca: ["All MCA Exams", "MCACET", "NIMCET", "CUTE PG MCA", "MAH BCACET"],
+        tiss: ["All TISS Exams", "CUTE PG COQP12", "CUTE PG COQP11", "TISS CAT"],
+        bba: ["All BBA Exams", "IPMAT INDORE", "SET GENERAL", "NPAT", "MAH BMS-BBA-BBM-CET", "CUTE UG", "CHRIST UNIVERSITY", "JIPMAT", "IIM"],
+        hotel: ["All Hotel-Management Exams", "NCHMCT JEE", "ECHAT", "IHM A", "MAH BHMCT CET"]
+    };
+
+    const materials = {
+        XAT: [
+            { title: "CAT 2025 Quant Notes", desc: "350+ pages covering all quant topics."}
+        ],
+        CAT: [
+            { title: "CAT 2025 Quant Notes", desc: "350+ pages covering all quant topics."}
+        ],
+        CLAT: [
+            { title: "CLAT Legal Reasoning", desc: "Comprehensive notes with practice sets."}
+        ],
+        IBPS: [
+            { title: "IBPS Quantitative Aptitude", desc: "Shortcut tricks & solved examples."}
+        ]
+    };
+
+    function showSubCourses(course) {
+        let subDiv = document.getElementById("subcourses");
+        subDiv.innerHTML = "";
+        if(subCourses[course]) {
+            subCourses[course].forEach(sub => {
+                subDiv.innerHTML += `<button class="btn btn-subcourse" onclick="showMaterials('${sub}')">${sub}</button>`;
+            });
+            subDiv.style.display = "block";
+        } else {
+            subDiv.style.display = "none";
+        }
+        document.getElementById("material-container").innerHTML = "";
+    }
+
+    function showMaterials(sub) {
+        let matDiv = document.getElementById("material-container");
+        matDiv.innerHTML = "";
+        (materials[sub] || []).forEach(m => {
+            matDiv.innerHTML += `
+                <div class="col-md-4 material-card">
+                    <div class="card">
+                        <img src="${m.img}" alt="${m.title}">
+                        <div class="card-body">
+                            <h5 class="card-title">${m.title}</h5>
+                            <p class="card-text">${m.desc}</p>
+                            <a href="#" class="btn btn-brand"><i class="fas fa-eye"></i> View Details</a>
+                            <a href="#" class="btn btn-success"><i class="fas fa-download"></i> Download</a>
+                        </div>
+                    </div>
+                </div>
+            `;
+        });
+    }
+
+    function showAllMaterials() {
+        document.getElementById("subcourses").style.display = "none";
+        document.getElementById("material-container").innerHTML = allMaterialsHTML;
+    }
+
+    // Show All Category by default on page load
+    document.addEventListener("DOMContentLoaded", showAllMaterials);
+</script>
+
+</body>
+</html>
