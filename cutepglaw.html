@@ -1,0 +1,684 @@
+-<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Law Entrance </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <!-- Poppins Font -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .top-bar {
+      background: green;
+      color: white;
+      padding: 5px 20px;
+      font-size: 14px;
+    }
+    .top-bar span {
+      margin-right: 20px;
+    }
+        .navbar-brand img {
+            height: 40px;
+        }
+
+        .success-title {
+            text-align: center;
+            margin: 30px 0 20px;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .highlight-number {
+            color: green;
+        }
+        .navbar {
+      padding: 10px 20px;
+      color: white;
+    }
+    .navbar .nav-link {
+    color: white !important;
+  }
+    .btn-login {
+      background-color: #c9e265;
+      color: black;
+      padding: 8px 16px;
+      border: none;
+    }
+    /* Hover dropdown support */
+.hover-dropdown:hover .dropdown-menu {
+  display: block;
+  margin-top: 0;
+}
+
+.hover-dropdown .dropdown-toggle::after {
+  transition: transform 0.2s;
+}
+.hover-dropdown:hover .dropdown-toggle::after {
+  transform: rotate(180deg);
+}
+        .whatsapp-icon, .call-icon {
+            position: fixed;
+            bottom: 20px;
+            font-size: 32px;
+            z-index: 1000;
+        }
+
+        .whatsapp-icon {
+            left: 20px;
+            color: #25D366;
+        }
+
+        .call-icon {
+            left: 70px;
+            color: orange;
+        }
+        .custom-container {
+      background: url('https://images.unsplash.com/photo-1503676260728-1c00da094a0b') no-repeat center center;
+      background-size: cover;
+      padding: 60px 20px;
+    }
+
+    .form-box {
+      background-color: rgba(255, 255, 255, 0.95);
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    }
+
+    .form-control, .form-select {
+      background-color: #f8f9fa;
+    }
+
+    .sub-course-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+
+    .sub-course-item {
+      flex: 0 0 calc(50% - 10px);
+      background: rgba(255, 255, 255, 0.6);
+      padding: 10px 15px;
+      border-radius: 5px;
+      font-weight: 500;
+      backdrop-filter: blur(5px);
+    }
+
+    @media (max-width: 768px) {
+      .custom-container {
+        padding: 30px 10px;
+      }
+      .sub-course-item {
+        flex: 0 0 100%;
+      }
+    }
+    .btn-brand {
+      background-color: #ff9900;
+      border-color: #ff9900;
+      color: white;
+    }
+
+    .btn-brand:hover {
+      background-color: #e68700;
+      border-color: #e68700;
+    }
+
+    .btn-outline-brand {
+      border-color: #ff9900;
+      color: #ff9900;
+    }
+
+    .btn-outline-brand:hover {
+      background-color: #ff9900;
+      color: white;
+    }
+
+    .session-btn {
+      cursor: pointer;
+    }
+
+    .card img {
+      height: 180px;
+      object-fit: cover;
+    }
+
+    .price-section del {
+      color: #888;
+    }
+
+    .price-section strong {
+      font-size: 1.2rem;
+      color: #003366;
+    }
+
+    .card-title {
+      color: #003366;
+      font-weight: 600;
+    }
+
+    .card-body ul {
+      padding-left: 1.2rem;
+    }
+
+    .card-body li {
+      margin-bottom: 5px;
+    }
+
+    .features-icon {
+      color: #003366;
+      margin-right: 5px;
+    }
+
+    .action-buttons a {
+      font-size: 0.9rem;
+    }
+        .footer {
+      background-color: #003366;
+      color: white;
+      padding: 40px 0;
+    }
+    .footer a {
+      color: white;
+      text-decoration: none;
+    }
+    .footer h5 {
+      border-bottom: 2px solid #8dc63f;
+      display: inline-block;
+      padding-bottom: 5px;
+    }
+    </style>
+</head>
+<body>
+<!-- Top Bar -->
+  <div class="top-bar d-flex justify-content-between">
+    <div>
+      <span>Enquiry: +91 8828581455</span>
+      <span>Support: +91 8857945882</span>
+      <span>| 10:00 AM - 07:00 PM</span>
+    </div>
+  </div>
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg px-3" style="background-color: #003366;">
+  <div class="container-fluid">
+    <!-- Logo -->
+    <a class="navbar-brand" href="#">
+      <img src="https://website.com/assets/images/logo.png" alt="Logo" height="40">
+    </a>
+
+    <!-- Toggler for mobile -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Navbar content -->
+    <div class="collapse navbar-collapse" id="mainNavbar">
+      <!-- Buy Course Dropdown -->
+      <div class="dropdown me-3 hover-dropdown">
+  <button class="btn btn-warning dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+    BUY COURSE
+  </button>
+  <ul class="dropdown-menu">
+    <li><a class="dropdown-item" href="mbaentrance.html">MBA Entrance</a></li>
+    <li><a class="dropdown-item" href="lawentrance.html">LAW Entrance</a></li>
+    <li><a class="dropdown-item" href="mcaentrance.html">MCA Entrance</a></li>
+    <li><a class="dropdown-item" href="tissentarance.html">TISS Entrance</a></li>
+    <li><a class="dropdown-item" href="bbaentrance.html">BBA Entrance</a></li>
+    <li><a class="dropdown-item" href="hotel_management.html">Hotel Management</a></li>
+  </ul>
+</div>
+
+
+
+      <!-- Main nav links -->
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0 ">
+        <li class="nav-item text-white" ><a class="nav-link" href="index.html">HOME</a></li>
+        <li class="nav-item text-white"><a class="nav-link" href="result.html">RESULT</a></li>
+        <li class="nav-item dropdown hover-dropdown">
+  <a class="nav-link dropdown-toggle" href="#" id="connectUsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    CONNECT US
+  </a>
+  <ul class="dropdown-menu" aria-labelledby="connectUsDropdown">
+    <li><a class="dropdown-item" href="contact.html">Contact Us</a></li>
+    <li><a class="dropdown-item" href="course_enquiry.html">Courses Enquiry</a></li>
+    <li><a class="dropdown-item" href="support.html">Support / Help</a></li>
+    <li><a class="dropdown-item" href="#b2b">B2B Associate</a></li>
+  </ul>
+</li>
+        <li class="nav-item text-white"><a class="nav-link" href="#">DEMO LECTURES</a></li>
+        <li class="nav-item dropdown hover-dropdown">
+  <a class="nav-link dropdown-toggle" href="#" id="otherDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    OTHER
+  </a>
+  <ul class="dropdown-menu" aria-labelledby="otherDropdown">
+    <li><a class="dropdown-item" href="#blog">Blog</a></li>
+    <li><a class="dropdown-item" href="#career">Career</a></li>
+    <li><a class="dropdown-item" href="#gallery">Gallery</a></li>
+  </ul>
+</li>
+      </ul>
+
+      <!-- Cart and Login -->
+      <div class="d-flex align-items-center">
+        <!-- Cart Icon -->
+        <div class="position-relative me-3">
+          <img src="https://img.icons8.com/ios-filled/24/ffffff/shopping-cart.png" alt="Cart" />
+          <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+            0
+          </span>
+        </div>
+
+        <!-- Login Button -->
+        <button class="btn btn-outline-warning bg-warning text-white" data-bs-toggle="modal" data-bs-target="#loginModal">Login / Register</button>
+        <!-- Login Modal -->
+<div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content d-flex flex-md-row">
+      <!-- Login Form -->
+      <div class="modal-body p-4 w-100">
+        <h5 class="mb-3 text-success">Welcome to <span class="text-success fw-bold">Institute</span></h5>
+        <button type="button" class="btn-close position-absolute top-0 end-0 m-3" data-bs-dismiss="modal" aria-label="Close"></button>
+        <form id="loginForm" novalidate>
+          <div class="mb-3">
+            <label for="email" class="form-label">Email address</label>
+            <input type="email" class="form-control" id="email" required>
+            <div class="invalid-feedback">Please enter a valid email.</div>
+          </div>
+          <div class="mb-3">
+            <label for="password" class="form-label">Password</label>
+            <input type="password" class="form-control" id="password" required>
+            <div class="invalid-feedback">Please enter your password.</div>
+          </div>
+          <div class="form-check mb-3">
+            <input class="form-check-input" type="checkbox" id="remember">
+            <label class="form-check-label" for="remember">Remember me</label>
+          </div>
+          <button type="submit" class="btn btn-success w-100">Login</button>
+          <p class="text-center mt-3">
+            Don't have an account? 
+            <a href="#" data-bs-toggle="modal" data-bs-target="#registerModal" data-bs-dismiss="modal">Register Now..!</a>
+          </p>
+        </form>
+      </div>
+      
+    </div>
+  </div>
+</div>
+<!-- Register Modal -->
+<div class="modal fade" id="registerModal" tabindex="-1" aria-labelledby="registerModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content p-4">
+      <h5 class="mb-3 text-success">Register with <span class="text-success fw-bold">Institute</span></h5>
+      <button type="button" class="btn-close position-absolute top-0 end-0 m-3" data-bs-dismiss="modal" aria-label="Close"></button>
+      <form id="registerForm" novalidate>
+        <div class="mb-3">
+          <label for="regName" class="form-label">Full Name</label>
+          <input type="text" class="form-control" id="regName" required>
+          <div class="invalid-feedback">Enter your name.</div>
+        </div>
+        <div class="mb-3">
+          <label for="regEmail" class="form-label">Email</label>
+          <input type="email" class="form-control" id="regEmail" required>
+          <div class="invalid-feedback">Enter a valid email.</div>
+        </div>
+        <div class="mb-3">
+          <label for="regPassword" class="form-label">Password</label>
+          <input type="password" class="form-control" id="regPassword" required>
+          <div class="invalid-feedback">Enter a password.</div>
+        </div>
+        <button type="submit" class="btn btn-success w-100">Register</button>
+      </form>
+    </div>
+  </div>
+</div>
+
+      </div>
+    </div>
+  </div>
+</nav>
+<section class="custom-container">
+  <div class="container">
+    <div class="row g-5 align-items-start">
+
+      <!-- Left Side: Sub-Courses (Transparent) -->
+      <div class="col-lg-6 text-blue">
+        <h3 class="mb-4">LAW Sub-Courses</h3>
+        <div class="sub-course-list">
+          <div class="sub-course-item"><a href="lawentrance.html">ALL LAW Exams</a></div>  
+          <div class="sub-course-item"><a href="clat.html">CLAT (Common Law Admission Test)</a></div>
+          <div class="sub-course-item"><a href="mhcetlaw.html">MHCET LAW (Maharashtra Common Entrance Test for Law)</a></div>
+          <div class="sub-course-item"><a href="ailet.html">AILET (All India Law Entrance Test)</a></div>
+          <div class="sub-course-item"><a href="slat.html">SLAT (Symbiosis Law Admission Test)</a></div>
+          <div class="sub-course-item"><a href="nlat.html">NLAT (NMIMS Law Aptitude Test)</a></div>
+          <div class="sub-course-item"><a href="lsat.html">LSAT (Law School Admission Test)</a></div>
+          <div class="sub-course-item"><a href="cutepglaw.html">CUTE LAW PG</a></div>
+        </div>
+      </div>
+
+      <!-- Right Side: Enquiry Form -->
+      <div class="col-lg-6">
+        <div class="form-box">
+          <h3 class="mb-4 text-primary">Enquiry Form</h3>
+          <form>
+            <div class="mb-3">
+              <label class="form-label">Full Name</label>
+              <input type="text" class="form-control" placeholder="Enter your name" required>
+            </div>
+
+            <div class="mb-3">
+              <label class="form-label">Phone</label>
+              <input type="tel" class="form-control" placeholder="Enter phone number" required>
+            </div>
+
+            <div class="mb-3">
+              <label class="form-label">Course</label>
+              <select class="form-select" required>
+                <option selected disabled>Choose Course</option>
+                <option>CLAT</option>
+                <option>AILET</option>
+                <option>MHCET LAW</option>
+                <option>SLAT</option>
+                <option>NLAT</option>
+                <option>LSAT</option>
+              </select>
+            </div>
+
+            <div class="mb-3">
+              <label class="form-label">Message</label>
+              <textarea class="form-control" rows="3" placeholder="Write your message"></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary w-100">Submit</button>
+          </form>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="py-5">
+  <div class="container">
+    <h2 class="text-center mb-4 fw-bold text-dark">Choose Your Session</h2>
+    <div class="d-flex justify-content-center gap-3 flex-wrap mb-5">
+      <button class="btn btn-outline-brand session-btn" onclick="showCourses('live')">Live Classes</button>
+      <button class="btn btn-outline-brand session-btn" onclick="showCourses('self')">Self Study</button>
+      <button class="btn btn-outline-brand session-btn" onclick="showCourses('sectional')">Sectional</button>
+      <button class="btn btn-outline-brand session-btn" onclick="showCourses('mock')">Mock Test</button>
+      <button class="btn btn-outline-brand session-btn" onclick="showCourses('books')">Books & eBooks</button>
+    </div>
+
+    <div id="course-container" class="row g-4"></div>
+  </div>
+</section>
+
+
+<!-- Floating Buttons -->
+<div class="whatsapp-icon">
+    <i class="bi bi-whatsapp"></i>
+</div>
+<div class="call-icon">
+    <i class="bi bi-telephone-fill"></i>
+</div>
+
+<!-- Newsletter Section -->
+<div class="newsletter-box">
+  <div class="container">
+    <h5 class="mb-3">Find out about the latest courses with the websiteEdu newsletter.</h5>
+    <form class="d-flex justify-content-center">
+      <input type="email" class="form-control" placeholder="Enter Email">
+      <button type="submit" class="btn btn-dark ms-2">Submit</button>
+    </form>
+  </div>
+</div>
+<!-- Footer -->
+<footer class="footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4 mb-3">
+        <img src="logo.png" alt="Logo" height="40">
+        <p class="mt-3">Empowering learners through innovative e-learning solutions.</p>
+      </div>
+      <div class="col-md-4 mb-3">
+        <h5>Quick Links</h5>
+        <ul class="list-unstyled">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="result.html">Result</a></li>
+          <li><a href="">Event</a></li>
+          <li><a href="contact.html">Contact US</a></li>
+        </ul>
+      </div>
+      <div class="col-md-4 mb-3">
+        <h5>Resources</h5>
+        <ul class="list-unstyled">
+          <li><a href="#">Gallery</a></li>
+          <li><a href="">Blog</a></li>
+          <li><a href="support.html">Support</a></li>
+          <li><a href="course_enquiry.html">Course Enquiry</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</footer>
+<!-- Bootstrap JS & Icons -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+<script>
+  const courseData = {
+    live: [
+      {
+        img: "programming-background-with-person-working-with-codes-computer_23-2150010127.jpg",
+        title: "CUTE PG LAW Weekend Batch ",
+        validity: "6 Months Access",
+        includes: ["550+ Lecture","250+ Live Lectures", "15+ Full length", "185+ Topic Wise", "73+ E-books", "6+ Books"],
+        price: 16999,
+        discount: 35999,
+        buyLink: "#",
+        cartLink: "#",
+        detailLink: "#"
+      },
+      {
+        img: "programming-background-with-person-working-with-codes-computer_23-2150010127.jpg",
+        title: "CUTE PG LAW Weekdays Batch",
+        validity: "4 Months Access",
+        includes: ["550+ Lecture","250+ Live Lectures", "15+ Full length", "185+ Topic Wise", "73+ E-books", "6+ Books"],
+        price: 16999,
+        discount: 35999,
+        buyLink: "#",
+        cartLink: "#",
+        detailLink: "#"
+      }
+    ],
+    self: [
+      {
+        img: "https://via.placeholder.com/400x200?text=Self+Study",
+        title: "CUTE PG LAW Self Study",
+        validity: "12 Months Access",
+        includes: ["647+ Lectures", "20+ Full Length", "455+ Topic Wise", "93+ E-Books"],
+        price: 11699,
+        discount: 31999,
+        buyLink: "#",
+        cartLink: "#",
+        detailLink: "#"
+      }
+    ],
+    sectional: [
+      {
+        img: "https://via.placeholder.com/400x200?text=Self+Study",
+        title: "CUTE PG LAW Quantitative Aptitude",
+        validity: "12 Months Access",
+        includes: ["92+ Lectures", "180+ Topic Wise", "8+ E-Books"],
+        price: 3899,
+        discount: 9999,
+        buyLink: "#",
+        cartLink: "#",
+        detailLink: "#"
+      },
+      {
+        img: "https://via.placeholder.com/400x200?text=Self+Study",
+        title: "CUTE PG LAW Logical Reasoning",
+        validity: "12 Months Access",
+        includes: ["107+ Lectures", "42+ Topic Wise", "27+ E-Books"],
+        price: 3999,
+        discount: 9999,
+        buyLink: "#",
+        cartLink: "#",
+        detailLink: "#"
+      },
+      {
+        img: "https://via.placeholder.com/400x200?text=Self+Study",
+        title: "CUTE PG LAW English",
+        validity: "12 Months Access",
+        includes: ["129+ Lectures", "125+ Topic Wise", "30+ E-Books"],
+        price: 4299,
+        discount: 9000,
+        buyLink: "#",
+        cartLink: "#",
+        detailLink: "#"
+      },
+      {
+        img: "study.jpg",
+        title: "CUTE PG LAW GK, Current Affairs",
+        validity: "12 Months Access",
+        includes: ["123+ Lectures", "84+ Topic Wise", "5+ E-Books"],
+        price: 4900,
+        discount: 9999,
+        buyLink: "#",
+        cartLink: "#",
+        detailLink: "#"
+      },
+      {
+        img: "study.jpg",
+        title: "CUTE PG LAW GK, Legal Aptitude",
+        validity: "12 Months Access",
+        includes: ["123+ Lectures", "84+ Topic Wise", "5+ E-Books"],
+        price: 4900,
+        discount: 9999,
+        buyLink: "#",
+        cartLink: "#",
+        detailLink: "#"
+      },
+      {
+        img: "study.jpg",
+        title: "CUTE PG LAW Computer",
+        validity: "12 Months Access",
+        includes: ["123+ Lectures", "84+ Topic Wise", "5+ E-Books"],
+        price: 4900,
+        discount: 9999,
+        buyLink: "#",
+        cartLink: "#",
+        detailLink: "#"
+      }
+    ],
+    mock: [
+        {
+        img: "https://via.placeholder.com/400x200?text=Self+Study",
+        title: "CUTE PG LAW Topic Wise",
+        validity: "12 Months Access",
+        includes: ["607+ Lectures"],
+        price: 699,
+        discount: 1999,
+        buyLink: "#",
+        cartLink: "#",
+        detailLink: "#"
+      }
+    ],
+    books: [
+      {
+        img: "study.jpg",
+        title: "CUTE PG LAW E-BOOK",
+        validity: "12 Months Access",
+        includes: ["109+ E-Books"],
+        price: 799,
+        discount: 1899,
+        buyLink: "#",
+        cartLink: "#",
+        detailLink: "#"
+      },
+      {
+        img: "study.jpg",
+        title: "CUTE PG LAW BOOK",
+        validity: "12 Months Access",
+        includes: ["6+ Books"],
+        price: 1299,
+        discount: 2000,
+        buyLink: "#",
+        cartLink: "#",
+        detailLink: "#"
+      }
+    ]
+  };
+
+  // Show Live Courses by default on page load
+window.onload = function() {
+  showCourses('live');
+};
+
+  function showCourses(type) {
+    const container = document.getElementById('course-container');
+    container.innerHTML = '';
+
+    if (!courseData[type].length) {
+      container.innerHTML = '<p class="text-center text-muted">No courses available for this session yet.</p>';
+      return;
+    }
+
+    courseData[type].forEach(course => {
+      const features = course.includes.map(f => `<li><i class="fa-solid fa-check features-icon"></i>${f}</li>`).join("");
+      container.innerHTML += `
+        <div class="col-md-6 col-lg-4">
+          <div class="card h-100 shadow-sm">
+            <img src="${course.img}" class="card-img-top" alt="${course.title}">
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title"><i class="fa-solid fa-graduation-cap me-2"></i>${course.title}</h5>
+              <p><i class="fa-regular fa-clock me-2"></i><strong>Validity:</strong> ${course.validity}</p>
+              <ul>${features}</ul>
+              <div class="price-section mb-3">
+                <strong>₹${course.price}</strong> <del>₹${course.discount}</del>
+              </div>
+              <div class="d-flex flex-column gap-2 mt-auto action-buttons">
+                <a href="${course.detailLink}" class="btn btn-outline-secondary w-100"><i class="fa-solid fa-eye me-1"></i>View Details</a>
+                <a href="${course.buyLink}" class="btn btn-brand w-100"><i class="fa-solid fa-bolt me-1"></i>Buy Now</a>
+                <a href="${course.cartLink}" class="btn btn-outline-brand w-100"><i class="fa-solid fa-cart-plus me-1"></i>Add to Cart</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      `;
+    });
+  }
+</script>
+
+<script>
+    function scrollLeft() {
+        document.getElementById('carousel').scrollBy({ left: -300, behavior: 'smooth' });
+    }
+
+    function scrollRight() {
+        document.getElementById('carousel').scrollBy({ left: 300, behavior: 'smooth' });
+    }
+</script>
+<!-- SCROLL SCRIPT FOR RESULT CAROUSEL -->
+<script>
+    function scrollLeftResult() {
+        document.getElementById('resultCarousel').scrollBy({ left: -300, behavior: 'smooth' });
+    }
+
+    function scrollRightResult() {
+        document.getElementById('resultCarousel').scrollBy({ left: 300, behavior: 'smooth' });
+    }
+    function scrollLeft() {
+      document.getElementById('cardSlider').scrollBy({ left: -320, behavior: 'smooth' });
+    }
+
+    function scrollRight() {
+      document.getElementById('cardSlider').scrollBy({ left: 320, behavior: 'smooth' });
+    }
+</script>
+</body>
+</html>
