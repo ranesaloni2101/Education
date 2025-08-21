@@ -178,6 +178,16 @@
     .action-buttons a {
       font-size: 0.9rem;
     }
+    .newsletter-box {
+      background-color: #8dc63f;
+      color: white;
+      padding: 30px 20px;
+      text-align: center;
+    }
+    .newsletter-box input {
+      max-width: 300px;
+      margin: 0 10px;
+    }
         .footer {
       background-color: #003366;
       color: white;
@@ -192,14 +202,18 @@
       display: inline-block;
       padding-bottom: 5px;
     }
+    a{
+      text-decoration: none;
+      color: black;
+    }
     </style>
 </head>
 <body>
 <!-- Top Bar -->
   <div class="top-bar d-flex justify-content-between">
     <div>
-      <span>Enquiry: +91 8828581455</span>
-      <span>Support: +91 8857945882</span>
+      <span>Enquiry: +91 9876543210</span>
+      <span>Support: +91 8765432109</span>
       <span>| 10:00 AM - 07:00 PM</span>
     </div>
   </div>
@@ -350,9 +364,9 @@
         <h3 class="mb-4">TISS Sub-Courses</h3>
         <div class="sub-course-list">
           <div class="sub-course-item"><a href="tissentarance.html">All TISS Exams</a></div>  
-          <div class="sub-course-item">TISS CAT (Tata Institute of Social Sciences)</div>
-          <div class="sub-course-item">CUTE PG COQP11 (Common University Entrance Test (CUET) for Postgraduate (PG))</div>
-          <div class="sub-course-item">CUTE PG COQP12 (Common University Entrance Test (Postgraduate) - MBA)</div>
+          <div class="sub-course-item"><a href="tiss3.html">TISS CAT (Tata Institute of Social Sciences)</a></div>
+          <div class="sub-course-item"><a href="tiss1.html">CUTE PG COQP11 (Common University Entrance Test (CUET) for Postgraduate (PG))</a></div>
+          <div class="sub-course-item"><a href="tiss2.html">CUTE PG COQP12 (Common University Entrance Test (Postgraduate) - MBA)</a></div>
         </div>
       </div>
 
@@ -409,6 +423,17 @@
     <div id="course-container" class="row g-4"></div>
   </div>
 </section>
+
+<!-- Newsletter Section -->
+<div class="newsletter-box">
+  <div class="container">
+    <h5 class="mb-3">Find out about the latest courses with the websiteEdu newsletter.</h5>
+    <form class="d-flex justify-content-center">
+      <input type="email" class="form-control" placeholder="Enter Email">
+      <button type="submit" class="btn btn-dark ms-2">Submit</button>
+    </form>
+  </div>
+</div>
 <!-- Floating Buttons -->
 <div class="whatsapp-icon">
     <i class="bi bi-whatsapp"></i>
